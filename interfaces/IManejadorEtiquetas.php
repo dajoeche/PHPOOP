@@ -9,7 +9,10 @@ class IManejadorEtiquetas extends ManejadorEtiquetas
     }
  
     function manejarEtiquetas()
-    {   $this->verificarExisteAtributos();
+    {   
+		$this->verificarExisteAtributosDefecto();
+		$this->verificarExisteAtributos();
+		$this->recorrerArrayAtributos();
 		$this->incluirAtributos();
 		$this->incluirElementos();
 		$this->guardarCodigoRetorno();

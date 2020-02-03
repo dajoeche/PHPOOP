@@ -3,7 +3,7 @@
 class ParrafoNombre extends EtiquetaParrafoHtml
 {
 
-    public $elementos = array("TextoSuNombre", "EntradaNombre");
+    public $elementos = array("TextoSuNombre", "CajaTextoNombre");
         
     public function __construct() 
     {

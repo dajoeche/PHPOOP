@@ -1,11 +1,10 @@
 <?php
 
-class EntradaNombre extends EtiquetaEntradaHtml
+class CajaTextoEdad extends CajaTexto
 {
 							
 	public $atributos = array(
-								"type"=>"text", 
-								"name"=>"nombre",
+								"name"=>"edad",
 	                         );
         
     public function __construct() 

@@ -10,7 +10,8 @@ class FormularioPersona extends EtiquetaFormularioHtml
 							
 	public $elementos = array(
 	                            "ParrafoNombre",
-	                            "ParrafoEdad"
+	                            "ParrafoEdad",
+	                            "ParrafoSubmit"
 							 );
         
     public function __construct() 

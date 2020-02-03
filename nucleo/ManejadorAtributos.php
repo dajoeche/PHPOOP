@@ -4,9 +4,25 @@ class ManejadorAtributos
 {
 	
     public $atributos = "Default";
+    public $atributosDefecto = "Default";
+    public $atributosTemporal = array();
     public $codigoAtributos;
 
+    function verificarExisteAtributosDefecto() 
+    {
+		is_array($this->atributosDefecto) ? $this->existeAtributosDefecto() : $this->noExisteAtributosDefecto();
+	}
+	
+    function existeAtributosDefecto() 
+    {   
+		$this->atributosTemporal=$this->atributosDefecto;	
+	}
 
+    function noExisteAtributosDefecto() 
+    {
+
+	}	
+	
     function verificarExisteAtributos() 
     {
 		is_array($this->atributos) ? $this->existeAtributos() : $this->noExisteAtributos();
@@ -14,9 +30,9 @@ class ManejadorAtributos
 
     function existeAtributos() 
     {
-		$this->recorrerArrayAtributos();
+		$this->atributosTemporal += $this->atributos;
 	}
-
+		
     function noExisteAtributos() 
     {
 		
@@ -24,7 +40,7 @@ class ManejadorAtributos
 
     function recorrerArrayAtributos()
     { 
-		array_walk($this->atributos,array($this,'generarAtributos'));
+		array_walk($this->atributosTemporal,array($this,'generarAtributos'));
 	}
 
     function generarAtributos($atributo, $nombreAtributo) 

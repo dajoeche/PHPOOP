@@ -1,5 +1,5 @@
 <?php
-include "/var/www/html/php/nucleo/arranque.php";
+include "/var/www/html/php/fpoop/nucleo/arranque.php";
 $obj = new IManejadorPaginas("PaginaPrincipal");
 ?>
 

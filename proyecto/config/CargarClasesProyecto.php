@@ -1,6 +1,7 @@
 <?php
-class CargarClases extends IAutoCargarClases
+class CargarClasesProyecto extends IAutoCargarClases
 {
+
 	public $directorios = array(
 								
 								"/var/www/html/php/proyecto/elementosPaginas/botones/",
@@ -16,12 +17,8 @@ class CargarClases extends IAutoCargarClases
 								"/var/www/html/php/proyecto/elementosPaginas/botonesSubmit/",
 								"/var/www/html/php/proyecto/elementosPaginas/utilitarios/",
 								"/var/www/html/php/proyecto/elementosPaginas/",
-								"/var/www/html/php/proyecto/paginas/",
-								"/var/www/html/php/interfaces/",
-								"/var/www/html/php/baseConocimiento/",
-								"/var/www/html/php/nucleo/",
-								"/var/www/html/php/proyecto/",								
-								"/var/www/html/php/config/"							
+								"/var/www/html/php/proyecto/paginas/",								
+								"/var/www/html/php/proyecto/config/"							
 							   );
     
     public function __construct() 

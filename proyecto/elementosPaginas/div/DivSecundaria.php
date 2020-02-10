@@ -7,6 +7,7 @@ class DivSecundaria extends EtiquetaDivHtml
 									"EtiquetaH1HtmlPrincipal", 
 									"EtiquetaNegritaHtmlPrincipal", 
 									"Saltar2Lineas", 
+									"ParrafoPreformateado",
 									"EnlacePaginaPrincipal"
 								);
         

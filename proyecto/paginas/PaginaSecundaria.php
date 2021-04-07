@@ -1,17 +1,16 @@
 <?php
 
-class PaginaSecundaria extends ConfigurarContenedor
+class PaginaSecundaria extends EstructuraHtml
 {
 
     public $contenido = array("DivSecundaria");
-        
-    public function __construct() 
-    {  
+
+    public function __construct()
+    {
 		parent::__construct();
     }
- 
-      
+
+
 }
 
 ?>
-

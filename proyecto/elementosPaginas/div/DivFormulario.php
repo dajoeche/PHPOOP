@@ -3,7 +3,10 @@
 class DivFormulario extends EtiquetaDivHtml
 {
 
-    public $elementos = array("FormularioPersona", "EnlacePaginaPrincipal");
+    public $elementos = array(
+								"Saltar2Lineas",							
+								"FormularioPersona", 
+							);
         
     public function __construct() 
     {

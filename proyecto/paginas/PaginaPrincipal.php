@@ -1,17 +1,18 @@
 <?php
 
-class PaginaPrincipal extends ConfigurarContenedor
+class PaginaPrincipal extends EstructuraHtml
 {
 
-    public $contenido = array("DivMenu");
-        
-    public function __construct() 
-    {  
+    public $contenido = array(
+								"DivPrincipal",
+							 );
+
+    public function __construct()
+    {
 		parent::__construct();
     }
- 
-      
+
+
 }
 
 ?>
-

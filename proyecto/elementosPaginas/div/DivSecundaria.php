@@ -8,7 +8,9 @@ class DivSecundaria extends EtiquetaDivHtml
 									"EtiquetaNegritaHtmlPrincipal", 
 									"Saltar2Lineas", 
 									"ParrafoPreformateado",
-									"EnlacePaginaPrincipal"
+									"EnlaceImagenBola",
+									"Saltar2Lineas",
+									
 								);
         
     public function __construct() 

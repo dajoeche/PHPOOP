@@ -1,19 +1,18 @@
 <?php
 
-class Formulario extends ConfigurarContenedor
+class Formulario extends EstructuraHtml
 {
 
     public $contenido = array(
 								"DivFormulario"
 							);
-        
-    public function __construct() 
-    {  
+
+    public function __construct()
+    {
 		parent::__construct();
     }
- 
-      
+
+
 }
 
 ?>
-

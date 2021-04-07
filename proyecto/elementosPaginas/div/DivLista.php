@@ -4,23 +4,22 @@ class DivLista extends EtiquetaDivHtml
 {
 
     public $elementos = array(
-								"EncabezadoSaludo", 
-								"MiItemsListaDesordenada", 
-								"SeparadorLineal", 
-								"EncabezadoDespedida", 
-								"MiItemsListaOrdenada", 
+								"EncabezadoSaludo",
+								"MiItemsListaDesordenada",
 								"SeparadorLineal",
-								"Saltar2Lineas",
-								"EnlacePaginaPrincipal"
+								"EncabezadoDespedida",
+								"MiItemsListaOrdenada",
+								"SeparadorLineal",
+                "EncabezadoListaDescripcion",
+                "MiItemsListaDescripcion",
 							);
-        
-    public function __construct() 
+
+    public function __construct()
     {
 		parent::__construct();
     }
- 
-      
+
+
 }
 
 ?>
-

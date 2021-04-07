@@ -1,17 +1,16 @@
 <?php
 
-class PaginaTerciaria extends ConfigurarContenedor
+class PaginaTerciaria extends EstructuraHtml
 {
 
-    public $contenido = array("EtiquetaDivHtmlPruebaEncabezados");
-        
-    public function __construct() 
-    {  
+    public $contenido = array("DivTerciario");
+
+    public function __construct()
+    {
 		parent::__construct();
     }
- 
-      
+
+
 }
 
 ?>
-

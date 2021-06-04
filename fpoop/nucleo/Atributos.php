@@ -6,8 +6,9 @@ class Atributos
     public $atributo = "Default";
     public $atributosDefecto = "Default";
     public $atributosTemporal = array();
+    public $arrayAtributos = array();
     public $codigoAtributos;
-    public $aperturas;
+    public $apertura;
 
     function setAtributos($atributos) { $this->atributos = $atributos;}
 
@@ -58,12 +59,19 @@ class Atributos
 
     function generarAtributos($atributo, $nombreAtributo)
     {
-			$this->codigoAtributos .= " ".$nombreAtributo." = ".'"'.$atributo.'"';
+			$this->arrayAtributos[] = " ".$nombreAtributo." = ".'"'.$atributo.'"';
   	}
 
     function incluirAtributos()
     {
-			$this->apertura = str_replace(">",$this->codigoAtributos.">",$this->apertura);
+      $this->quitarAtributosRepetidos();
+      $this->apertura = str_replace(">",$this->codigoAtributos.">",$this->apertura);
+	  }
+
+    function quitarAtributosRepetidos()
+    {
+      $this->codigoAtributos = implode("", array_unique($this->arrayAtributos));
+      $this->apertura = str_replace($this->codigoAtributos.">",">",$this->apertura);
 	  }
 
 }

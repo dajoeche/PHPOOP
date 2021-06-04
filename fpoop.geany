@@ -27,8 +27,11 @@ long_line_behaviour=1
 long_line_column=72
 
 [files]
-current_page=0
-FILE_NAME_0=291;PHP;0;EUTF-8;1;1;0;%2Fvar%2Fwww%2Fhtml%2Fphp%2Ffpoop%2Fmanejadores%2FMItemLista.php;0;4
+current_page=3
+FILE_NAME_0=2078;CSS;0;EUTF-8;1;1;0;%2Fvar%2Fwww%2Fhtml%2Fassets%2Fcss%2Fstyle.css;0;4
+FILE_NAME_1=0;CSS;0;EUTF-8;1;1;0;%2Fvar%2Fwww%2Fhtml%2Fassets%2Fcss%2Fbootstrap.css;0;4
+FILE_NAME_2=89476;Javascript;0;EUTF-8;1;1;0;%2Fvar%2Fwww%2Fhtml%2Fassets%2Fjs%2Fjquery.js;0;4
+FILE_NAME_3=39680;Javascript;0;EUTF-8;1;1;0;%2Fvar%2Fwww%2Fhtml%2Fassets%2Fjs%2Fbootstrap.min.js;0;4
 
 [VTE]
 last_dir=/home/hackman

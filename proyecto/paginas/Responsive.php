@@ -1,15 +1,13 @@
 <?php
 
-class Responsive extends EstructuraHtml
+class Responsive extends EstructuraResponsive
 {
 
     public $contenido = array(
-								              "EncabezadoCcsLayOut",
-                              "ParrafoUnoCcsLayOut",
-                              "ParrafoDosCcsLayOut",
-                              "HeaderLayOut",
-                              "SectionLayOut",
-                              "FooterLayOut",
+                              "DivCinque",
+                              "DivResponsivePrincipal",
+                              "DivResponsivePie",
+                              "DivResponsiveLetras",
 							               );
 
     public function __construct()

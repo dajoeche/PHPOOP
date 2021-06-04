@@ -1,6 +1,6 @@
 <?php
 
-class DivTerciario extends EtiquetaDivHtml
+class DivTerciario extends DivCentrado
 {
 
 	public $elementos = array(
@@ -13,14 +13,13 @@ class DivTerciario extends EtiquetaDivHtml
 								"Saltar2Lineas",
 								"BotonVolver"
 							 );
-        
-    public function __construct() 
+
+    public function __construct()
     {
 		parent::__construct();
     }
- 
-      
+
+
 }
 
 ?>
-

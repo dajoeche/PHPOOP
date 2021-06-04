@@ -2,7 +2,7 @@
 class IAutoCargarClases extends AutoCargarClases
 {
 	public $directorios = array(
-								
+
 								"/var/www/html/php/proyecto/elementosPaginas/botones/",
 								"/var/www/html/php/proyecto/elementosPaginas/div/",
 								"/var/www/html/php/proyecto/elementosPaginas/encabezados/",
@@ -18,18 +18,17 @@ class IAutoCargarClases extends AutoCargarClases
 								"/var/www/html/php/proyecto/paginas/",
 								"/var/www/html/php/baseConocimiento/",
 								"/var/www/html/php/nucleo/",
-								"/var/www/html/php/proyecto/",								
+								"/var/www/html/php/proyecto/",
 								"/var/www/html/php/config/",
 								
-								
+
 							   );
-    
-    public function __construct() 
+
+    public function __construct()
     {
 		$this->registrar();
     }
- 
-      
+
+
 }
 ?>
-

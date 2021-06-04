@@ -1,25 +1,24 @@
 <?php
 
-class DivSecundaria extends EtiquetaDivHtml
+class DivSecundaria extends DivCentrado
 {
 
 	    public $elementos = array(
-									"EtiquetaH1HtmlPrincipal", 
-									"EtiquetaNegritaHtmlPrincipal", 
-									"Saltar2Lineas", 
+									"EtiquetaH1HtmlPrincipal",
+									"EtiquetaNegritaHtmlPrincipal",
+									"Saltar2Lineas",
 									"ParrafoPreformateado",
 									"EnlaceImagenBola",
 									"Saltar2Lineas",
-									
+
 								);
-        
-    public function __construct() 
+
+    public function __construct()
     {
 		parent::__construct();
     }
- 
-      
+
+
 }
 
 ?>
-

@@ -1,21 +1,20 @@
 <?php
 
-class DivPrincipal extends EtiquetaDivHtml
+class DivPrincipal extends DivCentrado
 {
 
 	    public $elementos = array(
-									"Saltar2Lineas", 
+									"Saltar2Lineas",
 									"ImagenMonitor"
-									
+
 								);
-        
-    public function __construct() 
+
+    public function __construct()
     {
 		parent::__construct();
     }
- 
-      
+
+
 }
 
 ?>
-

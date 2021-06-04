@@ -41,6 +41,7 @@ class MEtiquetas
       $this->atributo->configurarAtributosDefecto($this->atributosDefecto);
       $this->atributo->configurarAtributos($this->atributos);
       $this->apertura = $this->atributo->crearAtributos();
+
     }
 
     function generarElementos()
@@ -72,6 +73,15 @@ class MEtiquetas
 			$this->elementos = $elementos;
 		}
 
+    function configurarAtributos($atributos)
+    {
+			$this->atributos = $atributos;
+		}
+
+    function configurarAtributosDefecto($atributosDefecto)
+    {
+			$this->atributosDefecto = $atributosDefecto;
+		}
 }
 
 ?>

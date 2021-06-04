@@ -5,6 +5,8 @@ class MListas
 
 	  public $tipoLista = "EtiquetaListaVinetaHtml";
 		public $etiquetaItemLista = "EtiquetaItemsListaHtml";
+		public $atributos = "Default";
+		public $atributosItem = "Default";
 		public $items = array();
     public $codigoRetorno="";
 
@@ -27,7 +29,9 @@ class MListas
 
 		function crearLista()
 		{
+			$this->lista->configurarAtributos($this->atributos);
 			$this->lista->crear();
+			$this->itemLista->configurarAtributos($this->atributosItem);
 			$this->itemLista->configurarItem($this->items);
 			$this->itemLista->crear();
 			$this->itemLista->envolverItem($this->lista->retornarCodigo());

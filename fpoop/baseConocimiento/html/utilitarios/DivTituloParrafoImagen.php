@@ -6,7 +6,6 @@ class DivTituloParrafoImagen
 
     public $codigoRetorno = "";
 
-
     public function __construct()
     {
 
@@ -18,7 +17,7 @@ class DivTituloParrafoImagen
       $this->generarParrafo();
       $this->generarImagen();
       $this->generarDiv();
-      return $this->objetoDiv->retornarCodigo();
+      return $this->codigoRetorno;
     }
 
 }

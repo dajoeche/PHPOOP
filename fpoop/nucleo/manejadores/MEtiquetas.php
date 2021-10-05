@@ -68,6 +68,11 @@ class MEtiquetas
       return $this->etiqueta->setCodigoRetorno($codigo);
     }
 
+    function configurarCodigoAdicional($codigo)
+    {
+      return $this->etiqueta->setCodigoAdicional($codigo);
+    }
+
     function configurarElementos($elementos)
     {
 			$this->elementos = $elementos;

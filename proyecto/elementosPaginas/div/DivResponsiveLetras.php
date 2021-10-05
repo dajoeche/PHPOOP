@@ -12,11 +12,6 @@ class DivResponsiveLetras extends DivTituloParrafo
 		public $atributosParrafo3 = "Default";
 		public $parrafo3 = "Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw i  s 0.5cm.";
 
-    public function __construct()
-    {
-		parent::__construct();
-    }
-
 
 }
 

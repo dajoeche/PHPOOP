@@ -14,7 +14,7 @@ class MElementos
 
     function crear($elementos)
     {
-      $this->elementos = $elementos;
+      $elementos <> "Default" ? $this->elementos = $elementos : $this->elementos="";
       is_array($elementos) ? $this->esArray() : $this->noEsArray();
       return $this->codigoRetorno;
 	  }

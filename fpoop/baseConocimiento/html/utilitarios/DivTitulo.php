@@ -16,7 +16,7 @@ class DivTitulo
     {
       $this->generarTitulo();
       $this->generarDiv();
-      return $this->objetoDiv->retornarCodigo();
+      return $this->codigoRetorno;
     }
 
 }

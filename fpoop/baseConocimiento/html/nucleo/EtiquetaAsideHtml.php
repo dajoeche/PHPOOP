@@ -1,6 +1,6 @@
 <?php
 
-class EtiquetaAsideHtml extends IManejadorEtiquetas
+class EtiquetaAsideHtml extends MEtiquetas
 {
 
     public $apertura = "<aside>";

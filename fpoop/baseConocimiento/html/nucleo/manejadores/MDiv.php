@@ -2,19 +2,27 @@
 
 trait MDiv
 {
+    use MPrincipal;
 
     public $etiquetaDiv = "EtiquetaDivHtml";
-    public $atributosDiv = array("Default");
+    public $atributosDiv = "Default";
     public $elementosDiv = "Default";
+    public $modoCodigoRetorno = "ON";
     public $codigoRetorno = "";
 
     public function generarDiv()
     {
-      $this->objetoDiv = new $this->etiquetaDiv();
-      $this->codigoRetorno=="" ? $this->codigoRetorno = $this->elementosDiv : $cd = "";
-      $this->objetoDiv->configurarElementos($this->codigoRetorno);
-      in_array("Default", $this->atributosDiv) ?  $cd = "" : $this->objetoDiv->configurarAtributos($this->atributosDiv);
-      $this->objetoDiv->crear();
+      $this->configurarNombreObjeto($this->etiquetaDiv);
+      $this->modoCodigoRetorno == "ON" ?
+                                      $this->configurarElementos($this->codigoRetorno) :
+                                      $this->configurarElementos($this->elementosDiv);
+      $this->configurarAtributos($this->atributosDiv);
+      $this->codigoRetorno = $this->generarPrincipal();
+    }
+
+    public function desactivarModoCodigoRetorno()
+    {
+      $this->modoCodigoRetorno = "OFF";
     }
 }
 

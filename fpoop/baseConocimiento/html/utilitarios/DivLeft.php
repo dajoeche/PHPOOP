@@ -3,7 +3,7 @@
 class DivLeft extends EtiquetaDivHtml
 {
 
-    public $atributos = array(
+    public $atributosDefecto = array(
 										                  "class"=>"left"
 								                     );
 

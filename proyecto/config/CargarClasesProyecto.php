@@ -3,7 +3,11 @@ class CargarClasesProyecto extends IAutoCargarClases
 {
 
 	public $directorios = array(
-
+								"/var/www/html/php/proyecto/elementosPaginas/fieldset/",
+								"/var/www/html/php/proyecto/elementosPaginas/textArea/",
+								"/var/www/html/php/proyecto/elementosPaginas/select/",
+								"/var/www/html/php/proyecto/elementosPaginas/checkbox/",
+								"/var/www/html/php/proyecto/elementosPaginas/radio/",
 								"/var/www/html/php/proyecto/elementosPaginas/span/",
 								"/var/www/html/php/proyecto/elementosPaginas/header/",
 								"/var/www/html/php/proyecto/elementosPaginas/section/",

@@ -2,6 +2,7 @@
 
 trait MTitulo
 {
+    use MPrincipal;
 
     public $etiquetaTitulo = "EtiquetaH2Html";
     public $atributosTitulo = "Default";
@@ -12,10 +13,10 @@ trait MTitulo
 
     public function generarTitulo()
     {
-      $this->objetoTitulo = new $this->etiquetaTitulo();
-      $this->objetoTitulo->configurarElementos($this->titulo);
-      $this->objetoTitulo->configurarAtributos($this->atributosTitulo);
-      $this->codigoRetorno .= $this->objetoTitulo->crear();
+      $this->configurarNombreObjeto($this->etiquetaTitulo);
+      $this->configurarElementos($this->titulo);
+      $this->configurarAtributos($this->atributosTitulo);
+      $this->codigoRetorno.=$this->generarPrincipal();
     }
 
 }

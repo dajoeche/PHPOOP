@@ -3,11 +3,15 @@
 trait MEtiquetaIncrustadoTexto
 {
 
+    use MPrincipal;
+
     public $etiquetaTexto = "EtiquetaParrafoHtml";
     public $etiquetaIncrustada = "EtiquetaSpanHtml";
+    public $codigoEtiquetaEncrustada = "";
     public $atributosTexto = "Default";
     public $atributosEtiquetaIncrustada = "Default";
     public $texto = "Cinque Terre";
+    public $codigoTexto = "";
     public $complemento = "Cinque Terre";
     public $codigoRetorno = "";
 
@@ -15,27 +19,35 @@ trait MEtiquetaIncrustadoTexto
     {
       $this->generarObjetoIncrustado();
       $this->generarTexto();
-      $this->codigoRetorno = str_replace(
-                                          "*",
-                                          $this->objetoEtiquetaIncrustada->crear(),
-                                          $this->objetoTexto->crear()
-                                         );
+      $this->incrustarTexto();
 
     }
 
     public function generarObjetoIncrustado()
     {
-      $this->objetoEtiquetaIncrustada = new $this->etiquetaIncrustada();
-      $this->objetoEtiquetaIncrustada->configurarElementos($this->complemento);
-      $this->objetoEtiquetaIncrustada->configurarAtributos($this->atributosEtiquetaIncrustada);
+      $this->configurarNombreObjeto($this->etiquetaIncrustada);
+      $this->configurarElementos($this->complemento);
+      $this->configurarAtributos($this->atributosEtiquetaIncrustada);
+      $this->codigoEtiquetaIncrustada = $this->generarPrincipal();
     }
 
     public function generarTexto()
     {
-      $this->objetoTexto = new $this->etiquetaTexto();
-      $this->objetoTexto->configurarElementos($this->texto);
-      $this->objetoTexto->configurarAtributos($this->atributosTexto);
+      $this->configurarNombreObjeto($this->etiquetaTexto);
+      $this->configurarElementos($this->texto);
+      $this->configurarAtributos($this->atributosTexto);
+      $this->codigoTexto = $this->generarPrincipal();
     }
+
+    public function incrustarTexto()
+    {
+      $this->codigoRetorno = str_replace(
+                                          "*",
+                                          $this->codigoEtiquetaIncrustada,
+                                          $this->codigoTexto
+                                         );
+    }
+
 }
 
 ?>

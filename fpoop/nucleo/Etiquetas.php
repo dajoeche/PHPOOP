@@ -6,6 +6,7 @@ class Etiquetas
   private $elementos = "";
   private $cierre = "";
   private $codigoRetorno = "";
+  private $codigoAdicional = "";
   private $saltoLineaElementos = "\n";
 
   public function __toString()
@@ -29,6 +30,10 @@ class Etiquetas
 
   function getCodigoRetorno() { return $this->codigoRetorno; }
 
+  function setCodigoAdicional($codigoAdicional) { $this->codigoAdicional = $codigoAdicional; }
+
+  function getCodigoAdicional() { return $this->codigoAdicional; }
+
   function comprobarSaltarLineaElementos()
   {
   	  $this->elementos== "*" || $this->elementos== "" ? $this->saltoLineaElementos= "" : $this->saltoLineaElementos= "\n";
@@ -36,7 +41,7 @@ class Etiquetas
 
   public function crear()
   {
-    $this->codigoRetorno = $this->apertura."\n".$this->elementos.$this->saltoLineaElementos.$this->cierre."\n";
+    $this->codigoRetorno = $this->apertura."\n".$this->elementos.$this->codigoAdicional.$this->saltoLineaElementos.$this->cierre."\n";
   }
 
 }

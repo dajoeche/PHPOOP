@@ -59,7 +59,9 @@ class Atributos
 
     function generarAtributos($atributo, $nombreAtributo)
     {
-			$this->arrayAtributos[] = " ".$nombreAtributo." = ".'"'.$atributo.'"';
+			is_numeric($nombreAtributo) ?
+                                    $this->arrayAtributos[] = " ".$atributo :
+                                    $this->arrayAtributos[] = " ".$nombreAtributo." = ".'"'.$atributo.'"';
   	}
 
     function incluirAtributos()

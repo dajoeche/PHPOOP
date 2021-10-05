@@ -16,7 +16,7 @@ class DivTituloParrafoCompuesto extends DivTituloParrafo
         $this->incluirReemplazos();
         $this->crearDivTituloParrafo();
         $this->incluirReemplazos();
-        return $this->objetoDiv->retornarCodigo();
+        return $this->codigoRetorno;
     }
 
    public function incluirReemplazos()

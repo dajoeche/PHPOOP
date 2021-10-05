@@ -14,7 +14,8 @@ class MEnlaces
     {
 
       $this->etiquetaObjeto = new $this->etiquetaEnlace();
-      $this->atributos = array("href"=>$this->href)+array("class"=>$this->class);
+      $this->class === "miEnlace" ? $this->atributos = array("href"=>$this->href) :  $this->atributos = array("href"=>$this->href)+array("class"=>$this->class);
+      //$this->atributos = array("href"=>$this->href)+array("class"=>$this->class);
       $this->etiquetaObjeto->configurarAtributos($this->atributos);
       $this->etiquetaObjeto->configurarElementos($this->elementos);
       $this->etiquetaObjeto->crear();

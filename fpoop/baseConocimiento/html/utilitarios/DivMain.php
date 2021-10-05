@@ -3,7 +3,7 @@
 class DivMain extends EtiquetaDivHtml
 {
 
-    public $atributos = array(
+    public $atributosDefecto = array(
 										                  "class"=>"main"
 								                     );
 

@@ -14,9 +14,9 @@ class DivParrafo
 
     public function crear()
     {
-      $this->generarParrafo();
+      $this->generarParrafos();
       $this->generarDiv();
-      return $this->objetoDiv->retornarCodigo();
+      return $this->codigoRetorno;
     }
 
 }

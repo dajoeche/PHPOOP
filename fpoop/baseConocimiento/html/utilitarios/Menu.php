@@ -41,7 +41,7 @@ class Menu extends MListas
        $this->enlace->configurarHref($valor["direccion"]);
        $this->codigoEnlace[] = $this->enlace->crear();
 		}
-    
+
 }
 
 ?>

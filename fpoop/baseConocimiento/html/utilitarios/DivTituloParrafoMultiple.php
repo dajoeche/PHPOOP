@@ -26,7 +26,7 @@ class DivTituloParrafoMultiple
 
       $this->generar();
       $this->generarDiv();
-      return $this->objetoDiv->retornarCodigo();
+      return $this->codigoRetorno;
     }
 
     public function generar()

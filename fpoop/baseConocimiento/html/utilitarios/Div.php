@@ -6,8 +6,9 @@ class Div
 
     public function crear()
     {
+      $this->desactivarModoCodigoRetorno();
       $this->generarDiv();
-      return $this->objetoDiv->retornarCodigo();
+      return $this->codigoRetorno;
     }
 
 }

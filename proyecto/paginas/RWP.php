@@ -6,7 +6,7 @@ class RWP extends EstructuraRWP
     public $contenido = array(
                               "DivRWPEncabezado",
                               "DivRWPPrincipal",
-                              "DivRWPPie",
+                              /*"DivRWPPie",*/
 							               );
 
     public function __construct()

@@ -9,7 +9,7 @@ class DivTituloSubtitulo
       $this->generarTitulo();
       $this->generarSubtitulo();
       $this->generarDiv();
-      return $this->objetoDiv->retornarCodigo();
+      return $this->codigoRetorno;
     }
 
 }

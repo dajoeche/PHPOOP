@@ -12,6 +12,7 @@ class MAtributos
   {
     $this->atributo->verificarExisteAtributosDefecto();
 	  $this->atributo->verificarExisteAtributos();
+	  $this->atributo->verificarExisteAtributosAdicionales();  
 	  $this->atributo->recorrerArrayAtributos();
     $this->atributo->incluirAtributos();
     return $this->atributo->getApertura();
@@ -30,6 +31,11 @@ class MAtributos
   function configurarAtributosDefecto($atributosDefecto)
   {
     $this->atributo->setAtributosDefecto($atributosDefecto);
+  }
+
+  function configurarAtributosAdicionales($atributosAdicionales)
+  {
+    $this->atributo->setAtributosAdicionales($atributosAdicionales);
   }
 }
 

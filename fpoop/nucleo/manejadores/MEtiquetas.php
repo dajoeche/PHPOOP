@@ -7,6 +7,7 @@ class MEtiquetas
     public $etiqueta;
     public $atributos = "Default";
     public $atributosDefecto = "Default";
+    public $atributosAdicionales = "Default";
     public $elementos = "Default";
 
 
@@ -40,6 +41,7 @@ class MEtiquetas
       $this->atributo->configurarApertura($this->apertura);
       $this->atributo->configurarAtributosDefecto($this->atributosDefecto);
       $this->atributo->configurarAtributos($this->atributos);
+      $this->atributo->configurarAtributosAdicionales($this->atributosAdicionales);
       $this->apertura = $this->atributo->crearAtributos();
 
     }
@@ -86,6 +88,11 @@ class MEtiquetas
     function configurarAtributosDefecto($atributosDefecto)
     {
 			$this->atributosDefecto = $atributosDefecto;
+    }  
+
+    function configurarAtributosAdicionales($atributosAdicionales)
+    {
+			$this->atributosAdicionales = $atributosAdicionales;
 		}
 }
 

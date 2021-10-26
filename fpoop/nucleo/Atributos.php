@@ -5,6 +5,7 @@ class Atributos
 
     public $atributo = "Default";
     public $atributosDefecto = "Default";
+    public $atributosDefectoAdicionales = "Default";
     public $atributosTemporal = array();
     public $arrayAtributos = array();
     public $codigoAtributos;
@@ -17,6 +18,10 @@ class Atributos
     function setAtributosDefecto($atributosDefecto) { $this->atributosDefecto = $atributosDefecto;}
 
     function getAtributosDefecto() { return $this->atributosDefecto; }
+
+    function setAtributosAdicionales($atributosAdicionales) { $this->atributosAdicionales = $atributosAdicionales;}
+
+    function getAtributosAdicionales() { return $this->atributosAdicionales; }
 
     function setApertura($apertura) { $this->apertura = $apertura;}
 
@@ -48,6 +53,21 @@ class Atributos
 	  }
 
     function noExisteAtributos()
+    {
+
+	  }
+
+    function verificarExisteAtributosAdicionales()
+    {
+			is_array($this->atributosAdicionales) ? $this->existeAtributosAdicionales() : $this->noExisteAtributosAdicionales();
+	  }
+
+    function existeAtributosAdicionales()
+    { 
+			$this->atributosTemporal += $this->atributosAdicionales;
+	  }
+
+    function noExisteAtributosAdicionales()
     {
 
 	  }

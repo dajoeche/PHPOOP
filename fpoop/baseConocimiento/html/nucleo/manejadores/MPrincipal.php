@@ -5,6 +5,7 @@ trait MPrincipal
 
     public $nombreObjeto = "Default";
     public $atributos = "Default";
+    public $atributosAdicionales = "Default";
     public $elementos = "Default";
     public $codigoPrincipal = "";
     public $codigoAdicional = "";
@@ -36,6 +37,7 @@ trait MPrincipal
       $this->crearInstancia();
       $this->configurarElementosObjeto();
       $this->configurarAtributosObjeto();
+      $this->configurarAtributosAdicionales();
       $this->configurarCodigoAdicionalObjeto();
       $this->guardarCodigoPrincipal();
       return $this->codigoPrincipal;
@@ -54,6 +56,11 @@ trait MPrincipal
     public function configurarAtributosObjeto()
     {
       $this->objeto->configurarAtributos($this->atributos);
+    }
+
+    public function configurarAtributosAdicionales()
+    {
+      $this->objeto->configurarAtributosAdicionales($this->atributosAdicionales);
     }
 
     function configurarCodigoAdicionalObjeto()

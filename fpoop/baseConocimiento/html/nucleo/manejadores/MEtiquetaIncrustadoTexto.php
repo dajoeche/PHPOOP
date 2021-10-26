@@ -41,7 +41,7 @@ trait MEtiquetaIncrustadoTexto
 
     public function incrustarTexto()
     {
-      $this->codigoRetorno = str_replace(
+      $this->codigoRetorno .= str_replace(
                                           "*",
                                           $this->codigoEtiquetaIncrustada,
                                           $this->codigoTexto

@@ -9,7 +9,7 @@ class ImagenBombilloApagado extends EtiquetaImagenHtml
 								"id"=>"myImage",
 							 );
     public $atributos = array(
-           								"src"=>"../assets/images/pic_bulboff.gif",
+           								"src"=>"../../../assets/images/pic_bulboff.gif",
            								"alt"=>"BombilloApagado",
            							 );
 

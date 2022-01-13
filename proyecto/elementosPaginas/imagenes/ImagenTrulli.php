@@ -4,7 +4,7 @@ class ImagenTrulli extends EtiquetaImagenHtml
 {
 
     public $atributos = array(
-								"src"=>"../assets/images/pic_trulli.jpg",
+								"src"=>"../../../assets/images/pic_trulli.jpg",
 								"alt"=>"Chica",
 							 );
 

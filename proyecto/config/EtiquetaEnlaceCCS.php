@@ -2,7 +2,7 @@
 
 class EtiquetaEnlaceCCS extends EtiquetaLinkHtml
 {
-    public $atributos = array("href" => "../assets/css/style.css" );
+    public $atributos = array("href" => "../../../assets/css/style.css" );
 
     public function __construct()
     {

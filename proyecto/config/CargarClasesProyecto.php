@@ -29,6 +29,7 @@ class CargarClasesProyecto extends IAutoCargarClases
 								"/var/www/html/php/proyecto/elementosPaginas/utilitarios/",
 								"/var/www/html/php/proyecto/elementosPaginas/iframes/",
 								"/var/www/html/php/proyecto/elementosPaginas/",
+								"/var/www/html/php/proyecto/controladores/",
 								"/var/www/html/php/proyecto/paginas/",
 								"/var/www/html/php/proyecto/config/"
 							   );

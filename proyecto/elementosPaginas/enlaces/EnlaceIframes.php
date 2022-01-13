@@ -4,7 +4,7 @@ class EnlaceIframes extends EtiquetaEnlacesHtml
 {
 
     public $elementos = "Iframes";
-    public $atributos = array("href"=>"http://localhost/php/iframes.php", "class"=>"miEnlace");
+    public $atributos = array("href"=>"http://localhost/php/proyecto/paginas/iframes.php", "class"=>"miEnlace");
 
     public function __construct()
     {

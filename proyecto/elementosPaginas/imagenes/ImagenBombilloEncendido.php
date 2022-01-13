@@ -4,7 +4,7 @@ class ImagenBombilloEncendido extends ImagenBombilloApagado
 {
 
     public $atributos = array(
-								"src"=>"../assets/images/pic_bulbon.gif",
+								"src"=>"../../../assets/images/pic_bulbon.gif",
                 "alt"=>"BombilloEncendido",
 							 );
 

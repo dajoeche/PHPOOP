@@ -3,7 +3,7 @@
 trait MFormulario
 {
 
-    use MPrincipal, MFormulario, MSubmit, MReset;
+    use MPrincipal, MSubmit, MReset;
 
     public $etiquetaFormulario = "EtiquetaFormularioHtml";
     public $atributosFormulario = array("Default");

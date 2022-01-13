@@ -4,7 +4,7 @@ class EnlaceOcultarTexto extends EtiquetaEnlacesHtml
 {
 
     public $elementos = "Ocultar Texto";
-    public $atributos = array("href"=>"http://localhost/php/ocultarTexto.php", "class"=>"miEnlace");
+    public $atributos = array("href"=>"http://localhost/php/proyecto/paginas/ocultarTexto.php", "class"=>"miEnlace");
 
     public function __construct()
     {

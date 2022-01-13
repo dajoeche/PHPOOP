@@ -4,7 +4,7 @@ class EnlaceFormAttributesHtml extends EtiquetaEnlacesHtml
 {
 
     public $elementos = "FormAttributes";
-    public $atributos = array("href"=>"http://localhost/php/formAttributes.php", "class"=>"miEnlace");
+    public $atributos = array("href"=>"http://localhost/php/proyecto/paginas/formAttributes.php", "class"=>"miEnlace");
 
     public function __construct()
     {

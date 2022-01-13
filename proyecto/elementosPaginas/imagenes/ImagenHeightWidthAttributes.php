@@ -4,7 +4,7 @@ class ImagenHeightWidthAttributes extends EtiquetaImagenHtml
 {
 
     public $atributos = array(
-								"src"=>"../assets/images/img_submit.gif",
+								"src"=>"../../../assets/images/img_submit.gif",
 								"alt"=>"Submit",
                  "width"=>"48",
                  "height"=>"48",

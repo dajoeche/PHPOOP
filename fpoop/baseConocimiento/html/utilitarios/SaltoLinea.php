@@ -5,7 +5,7 @@ class SaltoLinea extends MEtiquetas
 
     public $apertura = "";
     public $elementos = "";
-    public $cierre = "<br>";
+    public $cierre = "<br/>";
 
     public function __construct()
     {

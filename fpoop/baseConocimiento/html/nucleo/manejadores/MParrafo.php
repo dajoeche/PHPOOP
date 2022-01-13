@@ -15,7 +15,7 @@ trait MParrafo
       $this->objetoParrafo->configurarAtributos($this->atributosParrafo);
       $this->codigoRetorno .= $this->objetoParrafo->crear();
     }
-    
+
     public function generarParrafos()
     {
       $this->generarParrafo();
@@ -28,9 +28,10 @@ trait MParrafo
 
       if (isset($this->parrafo3)) {
         $this->parrafo = $this->parrafo3;
-        $this->atributosParrafo = $this->atributosParrafo3;
+        isset($this->atributosParrafo3) ? $this->atributosParrafo = $this->atributosParrafo3 : $cd = "";
         $this->generarParrafo();
       }
+
     }
 }
 

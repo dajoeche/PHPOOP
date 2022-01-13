@@ -15,7 +15,7 @@ class TituloParrafoFormulario
     public function crearTituloParrafoFormulario()
     {
       $this->generarTitulo();
-      $this->generarParrafo();
+      $this->generarParrafos();
       $this->generarFormulario();
     }
 

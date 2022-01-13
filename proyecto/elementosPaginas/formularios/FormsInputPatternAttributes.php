@@ -13,7 +13,7 @@ class FormsInputPatternAttributes  extends TituloParrafoFormulario
 
 	public $elementosFormulario = array(
                               "SaltarLinea",
-	                            "FileMultipleInput",
+	                            "PatternAttributeInput",
                               "Saltar2Lineas",
 							 );
 

@@ -9,6 +9,7 @@ class MObjetos
     public $codigoRetorno = "";
     public $codigoRetornoTemporal = "";
     public $concatenador = "";
+    public $caracterReemplazo = "$*";
 
     public function __construct()
     {
@@ -71,19 +72,19 @@ class MObjetos
       $this->codigoRetornoTemporal = $this->codigoRetorno;
       $this->codigoRetorno="";
       $this->crear($nombreObjeto);
-      $this->codigoRetorno = str_replace("*",$this->codigoRetorno.$this->concatenador,$this->codigoRetornoTemporal);
+      $this->codigoRetorno = str_replace($this->caracterReemplazo,$this->codigoRetorno.$this->concatenador,$this->codigoRetornoTemporal);
 	  }
 
     function cambiarEstadoConcatenador()
     {
-      $this->concatenador == "" ?  $this->concatenador = "*" : $this->concatenador = "";
+      $this->concatenador == "" ?  $this->concatenador = $this->caracterReemplazo : $this->concatenador = "";
 	  }
 
     function habilitarBody()
     {
-      $this->codigoRetorno = str_replace("&","*",$this->codigoRetorno);
+      $this->codigoRetorno = str_replace("&",$this->caracterReemplazo,$this->codigoRetorno);
     }
-    
+
 }
 
 ?>

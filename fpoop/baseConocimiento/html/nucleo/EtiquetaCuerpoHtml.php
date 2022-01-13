@@ -3,7 +3,7 @@
 class EtiquetaCuerpoHtml extends MEtiquetas
 {
     public $apertura = "<body>";
-    public $elementos = "*";
+    public $elementos = "$*";
     public $cierre = "</body>";
 
     public function __construct()

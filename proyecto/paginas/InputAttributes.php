@@ -22,6 +22,23 @@ class InputAttributes extends EstructuraHtml
                               "SaltarLinea",
                               "ParrafoNotaPatternAttribute",
                               "SaltarLinea",
+								              "FormsInputRequiredAttributes",
+                              "SaltarLinea",
+                              "ParrafoNotaRequiredAttribute",
+                              "SaltarLinea",
+								              "FormsInputStepAttributes",
+                              "SaltarLinea",
+								              "FormsInputAutofocusAttributes",
+                              "SaltarLinea",
+								              "FormsInputHeightWidthAttributes",
+                              "SaltarLinea",
+                              "ParrafoNotaHeightWidthAttributes",
+                              "SaltarLinea",
+								              "FormsInputListAttributes",
+                              "SaltarLinea",
+                              "ParrafoNotaListAttributes",
+                              "SaltarLinea",
+								              "FormsInputAutocompleteAttributes",
                             );
 
     public function __construct()

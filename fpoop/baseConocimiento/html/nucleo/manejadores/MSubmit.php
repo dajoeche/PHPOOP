@@ -6,7 +6,7 @@ trait MSubmit
     use MPrincipal;
 
     public $etiquetaSubmit = "BotonSubmit";
-    public $atributosSubmit = "Default";
+    public $atributosSubmit = array();
     public $elementosSubmit = "Default";
     public $nombreSubmit = "Default";
     public $codigoSubmit = "";
@@ -15,7 +15,7 @@ trait MSubmit
     {
       $this->configurarNombreObjeto($this->etiquetaSubmit);
       $this->configurarElementos($this->elementosSubmit);
-      $this->configurarAtributos(array('value' => $this->nombreSubmit ));
+      $this->configurarAtributos($this->atributosSubmit + array('value' => $this->nombreSubmit ));
       $this->modoBoton == "ON" ? $this->codigoSubmit = $this->generarPrincipal() : $cd="";
       return $this->codigoSubmit;
     }

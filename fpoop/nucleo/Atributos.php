@@ -63,7 +63,7 @@ class Atributos
 	  }
 
     function existeAtributosAdicionales()
-    { 
+    {
 			$this->atributosTemporal += $this->atributosAdicionales;
 	  }
 
@@ -87,6 +87,8 @@ class Atributos
     function incluirAtributos()
     {
       $this->quitarAtributosRepetidos();
+      stripos($this->apertura, "/>") !== false ?
+      $this->apertura = str_replace("/>",$this->codigoAtributos." />",$this->apertura) :
       $this->apertura = str_replace(">",$this->codigoAtributos.">",$this->apertura);
 	  }
 

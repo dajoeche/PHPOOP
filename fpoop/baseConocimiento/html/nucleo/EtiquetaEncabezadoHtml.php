@@ -4,7 +4,7 @@ class EtiquetaEncabezadoHtml extends MEtiquetas
 {
 
     public $apertura = "<head>";
-    public $elementos = "*";
+    public $elementos = "$*";
     public $cierre = "</head>\n&";
 
     public function __construct()

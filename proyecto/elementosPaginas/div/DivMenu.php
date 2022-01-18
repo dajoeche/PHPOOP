@@ -63,6 +63,8 @@ class DivMenu extends EtiquetaDivHtml
 									"Espaciador",
 									"EnlaceSVGHtml",
 									"Espaciador",
+									"EnlaceMultimedia",
+									"Espaciador",
 								);
 
     public function __construct()

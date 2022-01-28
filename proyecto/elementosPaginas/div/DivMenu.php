@@ -65,7 +65,13 @@ class DivMenu extends EtiquetaDivHtml
 									"Espaciador",
 									"EnlaceMultimedia",
 									"Espaciador",
-								);
+									"EnlacePlugins",
+									"Espaciador",
+									"EnlaceYoutube",
+									"Espaciador",
+									"EnlaceGeolocation",
+									"Espaciador",
+																	);
 
     public function __construct()
     {

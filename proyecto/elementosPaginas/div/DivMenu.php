@@ -71,6 +71,14 @@ class DivMenu extends EtiquetaDivHtml
 									"Espaciador",
 									"EnlaceGeolocation",
 									"Espaciador",
+									"EnlaceDragDropHtml",
+									"Espaciador",
+									"EnlaceWebStorage",
+									"Espaciador",
+									"EnlaceWebWorker",
+									"Espaciador",
+									"EnlaceSSE",
+									"Espaciador",
 																	);
 
     public function __construct()

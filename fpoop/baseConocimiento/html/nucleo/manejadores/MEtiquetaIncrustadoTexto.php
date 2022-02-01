@@ -12,7 +12,7 @@ trait MEtiquetaIncrustadoTexto
     public $atributosEtiquetaIncrustada = "Default";
     public $texto = "Cinque Terre";
     public $codigoTexto = "";
-    public $complemento = "Cinque Terre";
+    public $complemento = "";
     public $codigoRetorno = "";
 
     public function generarTextoIncrustado()

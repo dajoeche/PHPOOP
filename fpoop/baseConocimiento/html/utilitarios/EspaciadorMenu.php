@@ -7,12 +7,6 @@ class EspaciadorMenu extends MEtiquetas
     public $elementos = " | ";
     public $cierre = " ";
 
-    public function __construct()
-    {
-		parent::__construct();
-    }
-
-
 }
 
 ?>

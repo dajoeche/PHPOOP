@@ -7,11 +7,6 @@ class AutoCargarClases
 	public $nombreArchivo;
 	public $enlaceArchivo;
 
-    public function __construct()
-    {
-
-    }
-
     function registrar()
     {
         spl_autoload_register(function ($nombreArchivo) {

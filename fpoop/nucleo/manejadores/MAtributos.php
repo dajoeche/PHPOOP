@@ -12,7 +12,7 @@ class MAtributos
   {
     $this->atributo->verificarExisteAtributosDefecto();
 	  $this->atributo->verificarExisteAtributos();
-	  $this->atributo->verificarExisteAtributosAdicionales();  
+	  $this->atributo->verificarExisteAtributosAdicionales();
 	  $this->atributo->recorrerArrayAtributos();
     $this->atributo->incluirAtributos();
     return $this->atributo->getApertura();

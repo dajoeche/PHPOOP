@@ -17,6 +17,10 @@ trait MColumnaTabla
       return $this->generarPrincipal();
     }
 
+    public function configurarElementosColumnaTabla($columna)
+    {
+      $this->elementosColumnaTabla = $columna;
+    }
 }
 
 ?>

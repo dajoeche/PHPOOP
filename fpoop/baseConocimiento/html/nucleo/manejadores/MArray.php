@@ -13,9 +13,19 @@ trait MArray
       }
     }
 
+    public function configurarFuncionRetornoExtraerFila($funcionRetornoExtraerFila)
+    {
+      $this->funcionRetornoExtraerFila = $funcionRetornoExtraerFila;
+    }
+
     public function iterarArray($matriz)
     {
       array_walk($matriz, array($this, $this->funcionRetornoIterarArray));
+    }
+
+    public function configurarFuncionRetornoIterarArray($funcionRetornoIterarArray)
+    {
+      $this->funcionRetornoIterarArray = $funcionRetornoIterarArray;
     }
 
 }

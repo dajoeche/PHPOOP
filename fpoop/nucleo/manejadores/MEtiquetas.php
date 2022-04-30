@@ -8,6 +8,8 @@ class MEtiquetas
     public $atributos = "Default";
     public $atributosDefecto = "Default";
     public $atributosAdicionales = "Default";
+    public $elementosDefecto = "Default";
+    public $elementosAdicionales = "Default";
     public $elementos = "Default";
 
 
@@ -48,6 +50,8 @@ class MEtiquetas
 
     function generarElementos()
     {
+      $this->elemento->configurarElementosDefecto($this->elementosDefecto);
+      $this->elemento->configurarElementosAdicionales($this->elementosAdicionales);
       $this->elementos =  $this->elemento->crear($this->elementos);
     }
 
@@ -80,20 +84,30 @@ class MEtiquetas
 			$this->elementos = $elementos;
 		}
 
+    function configurarElementosDefecto($elementosDefecto)
+    {
+    	$this->elementosDefecto = $elementosDefecto;
+    }
+
+    function configurarElementosAdicionales($elementosAdicionales)
+    {
+    	$this->elementosAdicionales = $elementosAdicionales;
+    }
+
     function configurarAtributos($atributos)
     {
 			$this->atributos = $atributos;
 		}
 
-    function configurarAtributosDefecto($atributosDefecto)
-    {
-			$this->atributosDefecto = $atributosDefecto;
-    }  
-
     function configurarAtributosAdicionales($atributosAdicionales)
     {
 			$this->atributosAdicionales = $atributosAdicionales;
 		}
+
+    function configurarAtributosDefecto($atributosDefecto)
+    {
+    	$this->atributosDefecto = $atributosDefecto;
+    }
 }
 
 ?>

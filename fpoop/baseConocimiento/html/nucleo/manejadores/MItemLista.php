@@ -1,88 +1,32 @@
 <?php
 
-class MItemLista extends MEtiquetas
+trait MItemLista
 {
 
-		public $itemLista = "EtiquetaItemsListaHtml";
-    public $codigoRetorno="";
-		public $funcionRetorno="generarItem";
-		public $codigoItem=array();
-		public $item="";
+    use MPrincipal;
 
-    public function __construct()
+    public $etiquetaItemLista = "EtiquetaItemsListaHtml";
+    public $atributosItemLista = "Default";
+    public $atributosItemsLista = "Default";
+    public $elementosItemLista = "";
+
+    public function generarItemLista()
     {
-		parent::__construct();
+      $this->configurarNombreObjeto($this->etiquetaItemLista);
+      $this->configurarElementos($this->elementosItemLista);
+      $this->configurarAtributos($this->atributosItemLista);
+      return $this->generarPrincipal();
     }
 
-		public function __toString()
-  	{
-    	return $this->codigoRetorno;
-  	}
-
-		function crear()
+    public function configurarElementosItemLista($columna)
     {
-			$this->crearItem();
-		}
+      $this->elementosItemLista = $columna;
+    }
 
-    function crearItem()
+    public function configurarAtributosItemLista($atributo)
     {
-			$this->recorrerItems($this->item);
-			$this->generarCodigoRetorno();
-		}
-
-    function recorrerItems($item)
-    {
-			array_walk($item, array($this,$this->funcionRetorno));
-		}
-
-    function generarCodigoRetorno()
-    {
-			$this->codigoRetorno=implode("",array_unique($this->codigoItem));
-		}
-
-    function generarItem($item)
-    {
-			$this->gestionarEtiqueta($item);
-			$this->guardarItem($this->retornarCodigo());
-		}
-
-    function gestionarEtiqueta($item)
-    {
-			$this->configurarElementos($item);
-			$this->crearEtiqueta();
-		}
-
-    function guardarItem($item)
-    {
-			$this->codigoItem[]=$item;
-		}
-
-    function configurarElementos($item)
-    {
-			$this->elementos=$item;
-		}
-
-    function configurarItem($item)
-    {
-			$this->item=$item;
-		}
-
-		function envolverItem($etiqueta)
-    {
-			$this->agregarEtiqueta($etiqueta);
-			$this->guardarCodigoRetorno();
-		}
-
-		function agregarEtiqueta($etiqueta)
-    {
-			$this->codigoRetorno = str_replace("*",$this->codigoRetorno,$etiqueta);
-		}
-
-		function guardarCodigoRetorno()
-    {
-			$this->etiqueta->setCodigoRetorno($this->codigoRetorno);
-		}
-
+      $this->atributosItemLista = $atributo;
+    }
 }
 
 ?>

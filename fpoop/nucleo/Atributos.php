@@ -33,7 +33,7 @@ class Atributos
 	  }
 
     function existeAtributosDefecto()
-    {
+    { 
 			$this->atributosTemporal=$this->atributosDefecto;
 	  }
 

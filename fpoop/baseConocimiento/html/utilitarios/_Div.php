@@ -1,6 +1,7 @@
+
 <?php
 
-class Div
+class _Div
 {
     use MDiv;
 

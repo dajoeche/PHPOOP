@@ -2,6 +2,7 @@
 
 trait MImagen
 {
+    use MPrincipal;
 
     public $etiquetaImagen = "EtiquetaImagenHtml";
     public $atributosImagen = "Default";
@@ -9,10 +10,10 @@ trait MImagen
 
     public function generarImagen()
     {
-      $this->objetoImagen = new $this->etiquetaImagen();
-      $this->objetoImagen->configurarElementos($this->elementosImagen);
-      $this->objetoImagen->configurarAtributos($this->atributosImagen);
-      $this->codigoRetorno .= $this->objetoImagen->crear();
+      $this->configurarNombreObjeto($this->etiquetaImagen);
+      $this->configurarElementos($this->elementosImagen);
+      $this->configurarAtributos($this->atributosImagen);
+      $this->codigoRetorno .= $this->generarPrincipal();
     }
 
 }

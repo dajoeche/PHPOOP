@@ -1,6 +1,6 @@
 <?php
 
-class EnlaceIntroduction extends MEnlaces
+class EnlaceIntroduction extends _Enlace
 {
 
     public $elementosEnlace = "Introduction";

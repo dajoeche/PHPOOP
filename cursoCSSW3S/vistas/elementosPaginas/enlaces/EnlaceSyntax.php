@@ -1,6 +1,6 @@
 <?php
 
-class EnlaceSyntax extends MEnlaces
+class EnlaceSyntax extends _Enlace
 {
 
     public $elementosEnlace = "Syntax";

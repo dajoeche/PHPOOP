@@ -10,6 +10,7 @@ trait MTitulo
     public $titulo = "Cinque Terre";
     public $titulo1 = "";
     public $titulo2 = "";
+    public $codigoRetorno = "";
 
     public function generarTitulo()
     {

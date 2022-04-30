@@ -1,6 +1,6 @@
 <?php
 
-class EnlaceBackgroundAttachment extends MEnlaces
+class EnlaceBackgroundAttachment extends _Enlace
 {
 
     public $elementosEnlace = "Background Attachment";

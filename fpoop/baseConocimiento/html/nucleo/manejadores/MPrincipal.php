@@ -7,6 +7,8 @@ trait MPrincipal
     public $atributos = "Default";
     public $atributosAdicionales = "Default";
     public $elementos = "Default";
+    public $elementosDefecto = "Default";
+    public $elementosAdicionales = "Default";
     public $codigoPrincipal = "";
     public $codigoAdicional = "";
     public $funcionRetornoIterar = "crearOption";
@@ -36,7 +38,10 @@ trait MPrincipal
     {
       $this->crearInstancia();
       $this->configurarElementosObjeto();
+      $this->configurarElementosDefecto();
+      $this->configurarElementosAdicionales();
       $this->configurarAtributosObjeto();
+      $this->configurarAtributosDefecto();
       $this->configurarAtributosAdicionales();
       $this->configurarCodigoAdicionalObjeto();
       $this->guardarCodigoPrincipal();
@@ -53,9 +58,24 @@ trait MPrincipal
       $this->objeto->configurarElementos($this->elementos);
     }
 
+    public function configurarElementosDefecto()
+    {
+      $this->objeto->configurarElementosDefecto($this->elementosDefecto);
+    }
+
+    public function configurarElementosAdicionales()
+    {
+      $this->objeto->configurarElementosAdicionales($this->elementosAdicionales);
+    }
+
     public function configurarAtributosObjeto()
     {
       $this->objeto->configurarAtributos($this->atributos);
+    }
+
+    public function configurarAtributosDefecto()
+    {
+      isset($this->atributosDefecto) ? $this->objeto->configurarAtributosDefecto($this->atributosDefecto) : $cd='';
     }
 
     public function configurarAtributosAdicionales()

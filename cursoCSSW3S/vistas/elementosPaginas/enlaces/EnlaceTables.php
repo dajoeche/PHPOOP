@@ -1,9 +1,9 @@
 <?php
 
-class EnlaceTables extends MEnlaces
+class EnlaceTables extends _Enlace
 {
 
-    public $elementosEnlace = "Tables";
+    public $elementosEnlace = "Tabla";
     public $href = PATHMENU."tables.php";
 
 }

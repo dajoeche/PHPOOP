@@ -1,6 +1,6 @@
 <?php
 
-class EnlaceSelectors extends MEnlaces
+class EnlaceSelectors extends _Enlace
 {
 
     public $elementosEnlace = "Selectors";

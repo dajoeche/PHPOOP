@@ -20,16 +20,14 @@ trait MParrafo
     {
       $this->generarParrafo();
 
-      if (isset($this->parrafo2)) {
-        $this->parrafo = $this->parrafo2;
-        isset($this->atributosParrafo2) ? $this->atributosParrafo = $this->atributosParrafo2 : $cd = "";
-        $this->generarParrafo();
-      }
-
-      if (isset($this->parrafo3)) {
-        $this->parrafo = $this->parrafo3;
-        isset($this->atributosParrafo3) ? $this->atributosParrafo = $this->atributosParrafo3 : $cd = "";
-        $this->generarParrafo();
+      for ($i = 2; $i < 11; $i++) {
+        $parrafo = "parrafo".$i;
+        $atributosParrafo = "atributosParrafo".$i;
+        if (isset($this->$parrafo)) {
+          $this->parrafo = $this->$parrafo;
+          isset($this->$atributosParrafo) ? $this->atributosParrafo = $this->$atributosParrafo : $cd = "";
+          $this->generarParrafo();
+        }
       }
 
     }

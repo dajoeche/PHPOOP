@@ -39,11 +39,6 @@ trait MTabla
       $this->guardarElementosTabla($this->codigoFilaTabla);
     }
 
-    public function configurarFuncionRetornoExtraerFila($funcionRetornoExtraerFila)
-    {
-      $this->funcionRetornoExtraerFila = $funcionRetornoExtraerFila;
-    }
-
     public function guardarElementosTabla($elementosTabla)
     {
       $this->elementosTabla = $elementosTabla;
@@ -56,11 +51,6 @@ trait MTabla
       $this->guardarElementosFilaTabla();
       $this->borrarCodigoColumnaTabla();
       $this->guardarCodigoFilaTabla();
-    }
-
-    public function configurarFuncionRetornoIterarArray($funcionRetornoIterarArray)
-    {
-      $this->funcionRetornoIterarArray = $funcionRetornoIterarArray;
     }
 
     public function guardarElementosFilaTabla()
@@ -82,11 +72,6 @@ trait MTabla
     {
       $this->configurarElementosColumnaTabla($columna);
       $this->guardarCodigoColumnaTabla();
-    }
-
-    public function configurarElementosColumnaTabla($columna)
-    {
-      $this->elementosColumnaTabla = $columna;
     }
 
     public function guardarCodigoColumnaTabla()

@@ -18,7 +18,7 @@ class CargarClasesProyecto extends IAutoCargarClases
 								"/var/www/html/php/proyecto/elementosPaginas/botones/",
 								"/var/www/html/php/proyecto/elementosPaginas/div/",
 								"/var/www/html/php/proyecto/elementosPaginas/encabezados/",
-
+PATHDIRECTORIOELEMENTOS."/tablas/",
 								"/var/www/html/php/proyecto/elementosPaginas/imagenes/",
 								"/var/www/html/php/proyecto/elementosPaginas/parrafos/",
 								"/var/www/html/php/proyecto/elementosPaginas/listas/",
@@ -28,6 +28,7 @@ class CargarClasesProyecto extends IAutoCargarClases
 								"/var/www/html/php/proyecto/elementosPaginas/botonesSubmit/",
 								"/var/www/html/php/proyecto/elementosPaginas/utilitarios/",
 								"/var/www/html/php/proyecto/elementosPaginas/iframes/",*/
+								PATHDIRECTORIOELEMENTOS."/imagenes/",
 								PATHDIRECTORIOELEMENTOS."/tablas/",
 								PATHDIRECTORIOELEMENTOS."/parrafoCompuesto/",
 								PATHDIRECTORIOELEMENTOS."/titulo/",

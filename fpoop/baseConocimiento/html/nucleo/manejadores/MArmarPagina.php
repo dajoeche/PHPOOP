@@ -15,6 +15,7 @@ trait MArmarPagina
   	public $style = "_Style";
   	public $body = "EtiquetaCuerpoHtml";
   	public $menu = "DivMenu";
+  	public $espaciador = "DivSpacing";
   	public $pieDePagina = "DivPieDePagina";
   	public $codigoRetorno = "";
 
@@ -36,6 +37,7 @@ trait MArmarPagina
 			$this->etiquetaObjeto->incrustar($this->body);
 			$this->etiquetaObjeto->cambiarEstadoConcatenador();
 			$this->etiquetaObjeto->incrustar($this->menu);
+			$this->etiquetaObjeto->incrustar($this->espaciador);
 			$this->etiquetaObjeto->incrustar($this->contenido);
 			$this->etiquetaObjeto->cambiarEstadoConcatenador();
 			$this->etiquetaObjeto->incrustar($this->pieDePagina);

@@ -4,7 +4,7 @@ class EnlaceSubmenu extends _Enlace
 {
 
     public $elementosEnlace = "Submenu";
-    public $href = PATHMENU."submenu.php";
+    public $href = PATHMENU."V_Submenu";
 
 }
 

@@ -4,17 +4,17 @@ class V_AttributeSelector extends EstructuraHtml
 {
 
     public $contenido = array(
+                              "Saltar2Lineas",
                               "SaltoLinea",
-                              "SaltoLinea",
-                              "SaltoLinea",
-                              "TituloParrafoAttributeSelector",
-                              "Espaciador",
-                              "EnlaceW3S",
-                              "Espaciador",
-                              "EnlaceDisney",
-                              "Espaciador",
-                              "EnlaceWikipedia",
-                              "Espaciador",
+                              "DivAttributeSelectorSimple",
+                              "Saltar2Lineas",
+                              "DivAttributeSelectorValue",
+                              "Saltar2Lineas",
+                              "DivAttributeContainerValueWord",
+                              "Saltar2Lineas",
+                              "DivAttributeValue",
+                              "Saltar2Lineas",
+                              "DivAttributeValueStartWord",
                             );
 }
 

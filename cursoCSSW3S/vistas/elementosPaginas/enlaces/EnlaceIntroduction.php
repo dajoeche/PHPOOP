@@ -4,7 +4,7 @@ class EnlaceIntroduction extends _Enlace
 {
 
     public $elementosEnlace = "Introduction";
-    public $href = PATHMENU."introduction.php";
+    public $href = PATHMENU."V_Introduction";
 
 }
 

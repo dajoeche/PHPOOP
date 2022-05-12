@@ -4,7 +4,7 @@ class EnlaceGallery extends _Enlace
 {
 
     public $elementosEnlace = "Gallery";
-    public $href = PATHMENU."gallery.php";
+    public $href = PATHMENU."V_Gallery";
 
 }
 

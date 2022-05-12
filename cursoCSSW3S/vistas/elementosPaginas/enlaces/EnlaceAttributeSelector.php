@@ -4,7 +4,7 @@ class EnlaceAttributeSelector extends _Enlace
 {
 
     public $elementosEnlace = "Attribute Selector";
-    public $href = PATHMENU."attributeselector.php";
+    public $href = PATHMENU."V_AttributeSelector";
 
 }
 

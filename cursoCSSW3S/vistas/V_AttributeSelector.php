@@ -15,6 +15,10 @@ class V_AttributeSelector extends EstructuraHtml
                               "DivAttributeValue",
                               "Saltar2Lineas",
                               "DivAttributeValueStartWord",
+                              "Saltar2Lineas",
+                              "DivAttributeValueContainsWord",
+                              "Saltar2Lineas",
+                              "DivStylingForms",
                             );
 }
 

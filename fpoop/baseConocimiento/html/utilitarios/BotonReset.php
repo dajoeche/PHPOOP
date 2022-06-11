@@ -2,7 +2,6 @@
 
 class BotonReset extends EtiquetaEntradaHtml
 {
-
     public $atributosDefecto = array(
 										"type"=>"reset"
 								     );
@@ -11,8 +10,6 @@ class BotonReset extends EtiquetaEntradaHtml
     {
 		parent::__construct();
     }
-
-
 }
 
 ?>

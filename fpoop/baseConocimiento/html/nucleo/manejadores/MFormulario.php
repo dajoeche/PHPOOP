@@ -6,11 +6,12 @@ trait MFormulario
     use MPrincipal, MSubmit, MReset;
 
     public $etiquetaFormulario = "EtiquetaFormularioHtml";
-    public $atributosFormulario = array("Default");
+    public $atributosFormulario = array();
     public $elementosFormulario = "Default";
     public $codigoRetorno = "";
     public $modoBoton = "ON";
     public $modoReset = "OFF";
+    public $modoFormulario = "ON";
 
 
     public function generarFormulario()

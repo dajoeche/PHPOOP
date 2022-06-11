@@ -1,14 +1,14 @@
 <?php
 
-class TextArea
+class _Button
 {
-    use MTextArea;
+    use MButton;
 
     public $codigoRetorno;
 
     public function crear()
     {
-      $this->generarTextArea();
+      $this->generarButton();
       return $this->codigoRetorno;
     }
 

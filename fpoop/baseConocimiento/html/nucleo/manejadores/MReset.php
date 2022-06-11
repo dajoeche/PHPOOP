@@ -16,8 +16,14 @@ trait MReset
       $this->configurarNombreObjeto($this->etiquetaReset);
       $this->configurarElementos($this->elementosReset);
       $this->configurarAtributos(array('value' => $this->nombreReset ));
-      $this->modoReset == "ON" ? $this->codigoReset = $this->generarPrincipal() : $cd="";
-      return $this->codigoReset;
+      if ($this->modoFormulario == "ON") {
+        $this->modoReset == "ON" ? $this->codigoReset = $this->generarPrincipal() : $cd="";
+        return $this->codigoReset;
+      } else {
+        $this->codigoRetorno = $this->generarPrincipal();
+        return $this->codigoRetorno;        
+      }
+
     }
 
 }

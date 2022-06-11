@@ -8,7 +8,7 @@ trait MSubmit
     public $etiquetaSubmit = "BotonSubmit";
     public $atributosSubmit = array();
     public $elementosSubmit = "Default";
-    public $nombreSubmit = "Default";
+    public $nombreSubmit = "Submit";
     public $codigoSubmit = "";
 
     public function generarSubmit()
@@ -16,8 +16,14 @@ trait MSubmit
       $this->configurarNombreObjeto($this->etiquetaSubmit);
       $this->configurarElementos($this->elementosSubmit);
       $this->configurarAtributos($this->atributosSubmit + array('value' => $this->nombreSubmit ));
-      $this->modoBoton == "ON" ? $this->codigoSubmit = $this->generarPrincipal() : $cd="";
-      return $this->codigoSubmit;
+      if ($this->modoFormulario == "ON") {
+        $this->modoBoton == "ON" ? $this->codigoSubmit = $this->generarPrincipal() : $this->codigoSubmit="";
+        return $this->codigoSubmit;
+      } else {
+        $this->codigoRetorno = $this->generarPrincipal();
+        return $this->codigoRetorno;
+      }
+
     }
 
 }

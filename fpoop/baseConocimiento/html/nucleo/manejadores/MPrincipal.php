@@ -49,8 +49,9 @@ trait MPrincipal
     }
 
     public function crearInstancia()
-    {
+    { //echo $this->nombreObjeto."<br>";
       $this->objeto = new $this->nombreObjeto();
+      //$this->nombreObjeto == "CajaTexto" ? print_r($this->objeto) : $cd ="";
     }
 
     public function configurarElementosObjeto()
@@ -60,12 +61,12 @@ trait MPrincipal
 
     public function configurarElementosDefecto()
     {
-      $this->objeto->configurarElementosDefecto($this->elementosDefecto);
+      $this->elementosDefecto==="Default" ? $cd ='' : $this->objeto->configurarElementosDefecto($this->elementosDefecto);
     }
 
     public function configurarElementosAdicionales()
     {
-      $this->objeto->configurarElementosAdicionales($this->elementosAdicionales);
+      $this->elementosAdicionales==="Default" ? $cd ='' : $this->objeto->configurarElementosAdicionales($this->elementosAdicionales);
     }
 
     public function configurarAtributosObjeto()
@@ -80,7 +81,7 @@ trait MPrincipal
 
     public function configurarAtributosAdicionales()
     {
-      $this->objeto->configurarAtributosAdicionales($this->atributosAdicionales);
+      $this->atributosAdicionales==="Default" ? $cd ='' : $this->objeto->configurarAtributosAdicionales($this->atributosAdicionales) ;
     }
 
     function configurarCodigoAdicionalObjeto()

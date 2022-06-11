@@ -15,6 +15,7 @@ class DivMenu extends _Div
 									"EnlaceGallery",
 									"EnlaceImageSprites",
 									"EnlaceAttributeSelector",
+									"EnlaceForms",
 																	);
 	    public $atributosDiv = array("class"=>"menu");
 

@@ -19,7 +19,12 @@ trait MColumnaTabla
 
     public function configurarElementosColumnaTabla($columna)
     {
-      $this->elementosColumnaTabla = $columna;
+      //isset($columna[0]["etiqueta"]) ? print_r($columna[0]["etiqueta"]) : $cd = "";
+      //echo "----------------------------<br>";
+
+      isset($columna[0]["elemento"]) ? $this->elementosColumnaTabla = $columna[0]["elemento"] : $this->elementosColumnaTabla = $columna;
+      isset($columna[0]["etiqueta"]) ? $this->etiquetaColumnaTabla = $columna[0]["etiqueta"][0] : $cd = "";
+
     }
 }
 

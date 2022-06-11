@@ -1,17 +1,15 @@
 <?php
 
-class Submit
+class Submit extends EtiquetaEntradaHtml
 {
-    use MSubmit;
+    public $atributosDefecto = array(
+										"type"=>"submit"
+								     );
 
-    public $codigoRetorno = "";
-
-    public function crear()
+    public function __construct()
     {
-      $this->generarSubmit();
-      return $this->codigoRetorno = $this->codigoSubmit;
+		parent::__construct();
     }
-
 }
 
 ?>

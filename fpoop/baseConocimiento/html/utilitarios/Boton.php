@@ -1,10 +1,10 @@
 <?php
 
-class CajaTexto extends EtiquetaEntradaHtml
+class Boton extends EtiquetaEntradaHtml
 {
 
     public $atributosDefecto = array(
-										"type"=>"text"
+										"type"=>"button"
 								     );
 }
 

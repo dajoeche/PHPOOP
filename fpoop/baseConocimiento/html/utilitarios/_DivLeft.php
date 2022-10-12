@@ -1,10 +1,10 @@
 <?php
 
-class DivRight extends EtiquetaDivHtml
+class _DivLeft extends EtiquetaDivHtml
 {
 
     public $atributosDefecto = array(
-										                  "class"=>"right"
+										                  "class"=>"left"
 								                     );
 
     public function __construct()

@@ -18,7 +18,8 @@ class CargarClasesFpoop extends IAutoCargarClases
 								"/var/www/html/php/fpoop/baseConocimiento/html/bootstrap/utilitarios/",
 								"/var/www/html/php/fpoop/nucleo/",
 								"/var/www/html/php/fpoop/proyecto/",
-								"/var/www/html/php/fpoop/config/"
+								"/var/www/html/php/fpoop/config/",
+								"/var/www/html/php/fpoop/model/",
 							   );
 
     public function __construct()

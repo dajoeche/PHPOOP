@@ -54,6 +54,7 @@ trait MLista
 
     public function generarItemArray()
     {
+      isset($this->item[0]["nombreItem"]) ? array_push($this->arrayElementos,$this->item[0]["nombreItem"]) : $cd="";
       isset($this->item[0]["enlace"]) ? array_push($this->arrayElementos,$this->item[0]["enlace"]) : $cd="";
       isset($this->item[0]["submenu"]) ? array_push($this->arrayElementos,$this->item[0]["submenu"]) : $cd="";
       $this->configurarElementosItemLista($this->arrayElementos);

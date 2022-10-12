@@ -28,6 +28,11 @@ trait MArray
       $this->funcionRetornoIterarArray = $funcionRetornoIterarArray;
     }
 
+    public function limpiarDatosArray($array)
+    {
+      $this->$array = array();
+    }
+
 }
 
 ?>

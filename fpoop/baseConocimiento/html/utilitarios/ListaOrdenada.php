@@ -1,14 +1,9 @@
 <?php
 
-class ListaOrdenada extends MListas
+class ListaOrdenada extends _Lista
 {
 
-	  public $tipoLista = "EtiquetaListaNumericaHtml";
-
-    public function __construct()
-    {
-		parent::__construct();
-    }
+	  public $etiquetaLista = "EtiquetaListaNumericaHtml";
 
 }
 

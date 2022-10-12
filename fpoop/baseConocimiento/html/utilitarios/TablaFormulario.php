@@ -5,7 +5,8 @@ class TablaFormulario extends _TablaFormulario
 
     public $etiquetaTabla = "DivContainer";
     public $etiquetaFilaTabla = "DivRow";
-    public $etiquetaColumnaTabla = "DivColumnaTabla25";
+    public $etiquetaColumna1Tabla = "DivColumnaTabla25";
+    public $etiquetaColumna2Tabla = "DivColumnaTabla75";
 
 }
 

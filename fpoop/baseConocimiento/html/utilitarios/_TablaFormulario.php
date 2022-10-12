@@ -2,10 +2,10 @@
 
 class _TablaFormulario
 {
-    use MTabla, MFormulario;
+    use MTabla, MFormulario, M_TablaFormulario;
 
     public $codigoRetorno = "";
-    
+
 
     public function  crear()
     {
@@ -15,10 +15,10 @@ class _TablaFormulario
 
     public function generarTabla()
     {
+      $this->generarEstructuraDatos();
       $this->crearEncabezadoTabla();
       $this->crearFilaTabla();
       $this->elementosFormulario = $this->elementosTabla;
-      //print_r($this->objeto);
       $this->generarFormulario();
       $this->elementosTabla = $this->codigoRetorno;
       $this->crearTabla();

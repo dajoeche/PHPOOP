@@ -14,6 +14,7 @@ trait MEtiquetaIncrustadoTexto
     public $codigoTexto = "";
     public $complemento = "";
     public $codigoRetorno = "";
+    private $codigoEtiquetaIncrustada = "";
 
     public function generarTextoIncrustado()
     {

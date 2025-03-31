@@ -10,7 +10,9 @@ class Atributos
     public $arrayAtributos = array();
     public $codigoAtributos;
     public $apertura;
-
+    private $atributos;
+    private $atributosAdicionales;
+    
     function setAtributos($atributos) { $this->atributos = $atributos;}
 
     function getAtributos() { return $this->atributos; }

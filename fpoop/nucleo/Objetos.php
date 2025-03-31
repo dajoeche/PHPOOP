@@ -3,6 +3,7 @@
 class Objetos
 {
   private $nombreObjeto;
+  private $objeto;
   private $codigoRetorno;
 
   function setNombreObjeto($nombreObjeto) { $this->nombreObjeto = $nombreObjeto; }

@@ -2,7 +2,8 @@
 
 class MAtributos
 {
-
+  private $atributo;
+  
   public function __construct()
   {
       $this->atributo = new Atributos();

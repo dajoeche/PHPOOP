@@ -7,6 +7,7 @@ trait MSubTitulo
     public $atributosSubtitulo = "Default";
     public $elementosSubtitulo = "Default";
     public $subtitulo = "Resize the browser window";
+    private $objetoSubtitulo;
     
     public function generarSubtitulo()
     {

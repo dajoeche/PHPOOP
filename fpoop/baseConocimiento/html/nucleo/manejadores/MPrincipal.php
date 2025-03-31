@@ -13,6 +13,7 @@ trait MPrincipal
     public $codigoAdicional = "";
     public $funcionRetornoIterar = "crearOption";
     public $funcionRetornoExtraer = "gestionarOptgroup";
+    private $objeto;
 
     public function configurarNombreObjeto($nombreObjeto)
     {

@@ -11,6 +11,9 @@ class MEtiquetas
     public $elementosDefecto = "Default";
     public $elementosAdicionales = "Default";
     public $elementos = "Default";
+    private $atributo;
+    private $elemento;
+    
 
 
     public function __construct()

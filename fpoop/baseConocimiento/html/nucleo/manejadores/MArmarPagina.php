@@ -18,6 +18,7 @@ trait MArmarPagina
   	public $espaciador = "DivSpacing";
   	public $pieDePagina = "DivPieDePagina";
   	public $codigoRetorno = "";
+  	private $etiquetaObjeto;
 
 
     public function generarArmarPagina()

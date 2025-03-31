@@ -7,6 +7,7 @@ trait MParrafo
     public $atributosParrafo = "Default";
     public $elementosParrafo = "Default";
     public $parrafo = "Cinque Terre";
+    public $objetoParrafo;
 
     public function generarParrafo()
     {

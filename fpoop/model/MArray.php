@@ -4,11 +4,25 @@ trait MArray
 {
 
     public $funcionRetornoExtraerFila = "Default";
+    public $funcionRetornoExtraerColumna = "Default";
     public $funcionRetornoIterarArray = "Default";
+
+    public function extraerColumna($fila)
+    {
+      foreach($fila as $columna){
+        call_user_func(array($this, $this->funcionRetornoExtraerColumna),$columna);
+      }
+    }
+
+    public function configurarFuncionRetornoExtraerColumna($funcionRetornoExtraerColumna)
+    {
+      $this->funcionRetornoExtraerColumna = $funcionRetornoExtraerColumna;
+    }
 
     public function extraerFila($matriz)
     {
       foreach($matriz as $fila){
+		  //print_r($fila);
         call_user_func(array($this, $this->funcionRetornoExtraerFila),$fila);
       }
     }

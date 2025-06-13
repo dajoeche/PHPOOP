@@ -12,6 +12,7 @@ trait MArmarPagina
   	public $meta = "EtiquetaMetaHtmlPrincipal";
   	public $css = "EtiquetaEnlaceCCS";
   	public $js = "EtiquetaEnlaceJS";
+  	public $jquery = "EtiquetaEnlaceJQuery";
   	public $style = "_Style";
   	public $body = "EtiquetaCuerpoHtml";
   	public $menu = "DivMenu";
@@ -30,10 +31,11 @@ trait MArmarPagina
 			$this->etiquetaObjeto->cambiarEstadoConcatenador();
 			$this->etiquetaObjeto->incrustar($this->titulo);
 			$this->etiquetaObjeto->incrustar($this->meta);
-      $this->etiquetaObjeto->incrustar($this->style);
+			$this->etiquetaObjeto->incrustar($this->style);
 			$this->etiquetaObjeto->incrustar($this->css);
 			$this->etiquetaObjeto->cambiarEstadoConcatenador();
 			$this->etiquetaObjeto->incrustar($this->js);
+			$this->etiquetaObjeto->agregar($this->jquery);
 			$this->etiquetaObjeto->habilitarBody();
 			$this->etiquetaObjeto->incrustar($this->body);
 			$this->etiquetaObjeto->cambiarEstadoConcatenador();

@@ -80,7 +80,7 @@ class Atributos
 	  }
 
     function generarAtributos($atributo, $nombreAtributo)
-    {
+    {    
 			is_numeric($nombreAtributo) ?
                                     $this->arrayAtributos[] = " ".$atributo :
                                     $this->arrayAtributos[] = " ".$nombreAtributo." = ".'"'.$atributo.'"';
@@ -92,6 +92,7 @@ class Atributos
       stripos($this->apertura, "/>") !== false ?
       $this->apertura = str_replace("/>",$this->codigoAtributos." />",$this->apertura) :
       $this->apertura = str_replace(">",$this->codigoAtributos.">",$this->apertura);
+      
 	  }
 
     function quitarAtributosRepetidos()

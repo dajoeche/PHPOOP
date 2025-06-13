@@ -1,7 +1,9 @@
 <?php
-srand(19);
-echo rand(0, 37), "\n";
+srand(14);
+echo rand(1, 31), "\n";
 
+srand(2);
+echo rand(1, 12), "\n";
 
 /*
 

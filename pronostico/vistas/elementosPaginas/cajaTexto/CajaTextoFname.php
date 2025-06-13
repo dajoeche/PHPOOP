@@ -8,11 +8,11 @@ class CajaTextoFname extends LabelCajaTexto
   public $separador = "<br>";
 
 	public $atributosCajaTexto = array(
-																			"id"=>"fname",
-																			"name"=>"fname",
-																			"value"=>"Peter",
-                                      "size"=>"20",
-	                         					);
+										"id"=>"fname",
+										"name"=>"fname",
+										"value"=>"Peter",
+										"size"=>"20",
+	                         		   );
 
 }
 

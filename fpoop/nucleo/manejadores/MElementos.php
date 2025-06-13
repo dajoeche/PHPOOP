@@ -34,15 +34,18 @@ class MElementos
     {
       $this->verificarExisteElementosDefecto();
       $this->verificarExisteElementosAdicionales();
-      $this->objeto->crear($this->elementos);
+      //echo '<pre>';
+      //print_r($this->elementos);
+	  isset($this->elementos["dato"]) ? $this->noEsArray() :  $this->objeto->crear($this->elementos);
+	  //echo "<pre>";
+	  //echo  htmlspecialchars($this->objeto->getCodigoRetorno());
       $this->codigoRetorno .=$this->objeto->getCodigoRetorno();
-	  }
+	}
 
     function noEsArray()
     {
       $this->codigoRetorno = $this->elementos;
-	  }
-
+	}
 
     function verificarExisteElementosDefecto()
     {

@@ -46,6 +46,7 @@ trait MPrincipal
       $this->configurarAtributosAdicionales();
       $this->configurarCodigoAdicionalObjeto();
       $this->guardarCodigoPrincipal();
+
       return $this->codigoPrincipal;
     }
 
@@ -71,7 +72,7 @@ trait MPrincipal
     }
 
     public function configurarAtributosObjeto()
-    {
+    { 
       $this->objeto->configurarAtributos($this->atributos);
     }
 

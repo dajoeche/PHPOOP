@@ -69,10 +69,19 @@ class MObjetos
 
     function incrustar($nombreObjeto)
     {
-      $this->codigoRetornoTemporal = $this->codigoRetorno;
+      $this->codigoRetornoTemporal =  $this->codigoRetorno;
       $this->codigoRetorno="";
       $this->crear($nombreObjeto);
       $this->codigoRetorno = str_replace($this->caracterReemplazo,$this->codigoRetorno.$this->concatenador,$this->codigoRetornoTemporal);
+	  }
+
+    function agregar($nombreObjeto)
+    {
+      $this->codigoRetornoTemporal =  $this->codigoRetorno;
+      $this->codigoRetorno="";
+      $this->crear($nombreObjeto);
+      $this->codigoRetornoTemporal = str_replace("</script>","</script> $*",$this->codigoRetornoTemporal);
+	  $this->codigoRetorno = str_replace($this->caracterReemplazo,$this->codigoRetorno.$this->concatenador,$this->codigoRetornoTemporal);
 	  }
 
     function cambiarEstadoConcatenador()

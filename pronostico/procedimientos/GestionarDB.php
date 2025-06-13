@@ -1,7 +1,8 @@
 <?php
-
+include_once ("Utilitario.php");
 class GestionarDB
 {
+	use Utilitario;
 	public $servidor="localhost";	
 	public $usuario="root";	
 	public $clave="L4v1d43ndb**01";	
@@ -54,11 +55,12 @@ class GestionarDB
     }						
 
     public function ejecutarQuery() {
+		//echo $this->query.'<br>';
 		$this->resultadoQuery = $this->mysqli->query($this->query);               
     }						
 
     public function imprimirQuery() {
-		echo '<pre>';
+		//echo '<pre>';
  		while ($row = $this->resultadoQuery->fetch_assoc()) {
 			foreach ($row as $valor){
 			$this->fila[]= $valor;
@@ -67,27 +69,24 @@ class GestionarDB
 		   unset($this->fila);
 		}	
 		//print_r($this->tabla);	
-		echo '</pre>';          
+		//echo '</pre>';          
     }						
 
     public function guardarResultado() {
 		foreach ($this->resultados as $valor){ 
 			    $this->codigoSorteo =  $this->codigoSorteo+1;
 			    $this->numeroRegistro =  $this->numeroRegistro+1;
-				echo '<pre>';
-				echo $valor;
+				//echo '<pre>';
+				echo $valor."<br>";
 				$this->existe();
 				if (mysqli_num_rows($this->existe) < 1) {
-					$this->mysqli->query("INSERT INTO `".$this->nombreTabla."` (`codigoResultado`, `fecha`, `animal`, `codigoLoteria`, `codigoSorteo`) VALUES ('".$this->numeroRegistro."', '".$this->fecha."', '".$valor."', '".$this->codigoLoteria."', '".$this->codigoSorteo."')");
+					$this->mysqli->query("INSERT INTO `".$this->nombreTabla."` (`fecha`, `animal`, `codigoLoteria`, `codigoSorteo`) VALUES ('".$this->fecha."', '".$valor."', '".$this->codigoLoteria."', '".$this->codigoSorteo."')");
 				}
-				echo '</pre>';
+				//echo '</pre>';
 		}     
     }	
-
-    public function incluirFechaQuery($fecha) {
-        $this->query = str_replace('*',$fecha,$this->query);	       
-    }	
-
+	
+    
     public function close() {
         $this->mysqli->close();	       
     }	

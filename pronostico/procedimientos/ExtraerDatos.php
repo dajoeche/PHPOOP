@@ -42,7 +42,7 @@ class ExtraerDatos extends GestionarDB
 		$this->obtenerNumeroRegistro();
 		$this->guardarResultado();
 		//echo $db->numeroRegistro;
-		echo "----------------------------------------------------------<br>";
+		//echo "----------------------------------------------------------<br>";
 		$this->close();	
 			      
     }

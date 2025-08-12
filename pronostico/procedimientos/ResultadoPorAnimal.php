@@ -1,7 +1,7 @@
 <?php
 
 
-class ResultadoPorAnimal extends PronosticarCategoria
+class ResultadoPorAnimal extends PronosticarPorSector
 {
 	public $query="SELECT DISTINCT(fecha) FROM `resultados2025` WHERE codigoLoteria = '%' and animal = '&'  and fecha < '*' ORDER BY `resultados2025`.`fecha` DESC; ";	
 

@@ -10,11 +10,12 @@ class TablaDiaSiguiente extends TituloTabla
   public $fechaInicio;
   public $fecha;
   public $manana;
+  public $sorteo;
   public $comparar;
   public $titulo =  "Dia Siguiente";
   public $captionTabla =  "Dia Siguiente";
   public $atributosTabla =  array("id"=>"miTabla");
-  public $encabezadoTabla =  array(array("Numero","Animal", "Fecha","Sorteo"));
+  public $encabezadoTabla =  array(array("","Numero","Animal", "Fecha","Sorteo"));
   public $itemsTabla;
  
     function __construct() {
@@ -26,9 +27,11 @@ class TablaDiaSiguiente extends TituloTabla
 
 		if (isset($_POST["loteria"])){ 
 				$this->loteria = $_POST["loteria"];	
+				$this->sorteo = $_POST["sorteo"];	
 		   } 
 		else {         	
 	            $this->loteria = 'LAC';	         	
+	            $this->sorteo = '1';	         	
 		     } 
 		     
 		$this->fechaInicio='2025-01-02';		
@@ -36,6 +39,7 @@ class TablaDiaSiguiente extends TituloTabla
 		$this->fecha=date('Y-m-d');		
 		$date = new DateTime($this->fechaInicio);
 		$this->comparar = new PrimerSorteo();	
+		$this->comparar->setSorteo($this->sorteo);
 		while ($this->fechaInicio < $this->fecha){
 			//echo $this->fechaInicio.' '.$this->fecha.' '.'<br>';
 			
@@ -50,7 +54,7 @@ class TablaDiaSiguiente extends TituloTabla
 		}
 
 		//echo $this->comparar->contador;
-		$this->titulo = $this->titulo.' '.$this->fecha.' - '.$this->getLoteria($this->loteria);
+		$this->titulo = $this->titulo.' '.$this->fecha.' - '.$this->getLoteria($this->loteria).' - '.$this->getSorteo($this->sorteo);
 		$this->itemsTabla=$this->comparar->tabla;
 		//echo "<pre>";
 		//print_r($this->comparar->tabla);

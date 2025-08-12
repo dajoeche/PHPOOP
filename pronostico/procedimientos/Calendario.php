@@ -1,7 +1,7 @@
 <?php
 
 
-class Calendario extends PronosticarCategoria
+class Calendario extends PronosticarPorSector
 {
 	public $query="SELECT * FROM `resultados2025` WHERE `animal` = '&' AND `codigoLoteria` LIKE '%'  ORDER BY `codigoResultados` ASC ";	
 

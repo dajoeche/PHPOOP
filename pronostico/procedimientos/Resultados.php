@@ -1,7 +1,7 @@
 <?php
 
 
-class Resultados extends PronosticarCategoria
+class Resultados extends M_BaseFechaLoteria
 {
 	public $query="
 					SELECT 

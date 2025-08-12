@@ -9,6 +9,7 @@ class V_Resultados extends EstructuraHtmlSyntax
                               "Saltar2Lineas",
                               "FormaResultados",
                               "TablaResultados",
+                              "TablaResultadosGrafico",
                             );
 }
 

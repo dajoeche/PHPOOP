@@ -1,7 +1,7 @@
 <?php
 
 
-class EnjauladosDiario extends PronosticarCategoria
+class EnjauladosDiario extends PronosticarPorSector
 {
 	public $query="
 					SELECT 
@@ -90,8 +90,6 @@ class EnjauladosDiario extends PronosticarCategoria
 		$this->ejecutarQuery();
 		$this->imprimirQuery();
 		$this->query = $this->queryOriginal;
-
-		//echo "----------------------------------------------------------<br>";
 		$this->close();
     }	
 }

@@ -1,5 +1,6 @@
 <?php
-include_once ("Utilitario.php");
+//require_once("./procedimientos/Utilitario.php");
+//include_once("Utilitario.php");
 class GestionarDB
 {
 	use Utilitario;
@@ -13,7 +14,9 @@ class GestionarDB
 	public $codigoSorteo = 0;	
 	public $codigoLoteria = 'LAC';	
 	public $resultado;	
+	public $numeroRegistrosDb;	
 	public $query;
+	public $existe;
 	public $resultadoQuery;
 	public $mysqli;
 	public $tabla= array();
@@ -77,7 +80,7 @@ class GestionarDB
 			    $this->codigoSorteo =  $this->codigoSorteo+1;
 			    $this->numeroRegistro =  $this->numeroRegistro+1;
 				//echo '<pre>';
-				echo $valor."<br>";
+				//echo $valor."<br>";
 				$this->existe();
 				if (mysqli_num_rows($this->existe) < 1) {
 					$this->mysqli->query("INSERT INTO `".$this->nombreTabla."` (`fecha`, `animal`, `codigoLoteria`, `codigoSorteo`) VALUES ('".$this->fecha."', '".$valor."', '".$this->codigoLoteria."', '".$this->codigoSorteo."')");

@@ -3,9 +3,11 @@
 class FormaCalendario extends TablaFormulario
 {
   public $modoBoton = "OFF";
-  public $atributosFormulario = array("action"=>"http://localhost//phpoop/pronostico/index.php?ir=V_Calendario", "method"=>"post");
+  public $atributosFormulario = array("action"=>PATHMENU."V_Calendario", "method"=>"post");
   public $itemsTabla =  array(
                                 array("SelectAnimal"),
+                                array("SelectAnimal2"),
+                                array("SelectNumeroAnimal"),
                                 array("SelectLoteria"),
                                 array("Espacio","SubmitForma"),
                              );

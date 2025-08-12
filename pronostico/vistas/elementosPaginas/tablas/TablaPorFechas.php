@@ -27,9 +27,12 @@ class TablaPorFechas extends TituloTabla
 		if (isset($_POST["fecha"])){ 
 				$fecha = $_POST["fecha"]; 
 				$this->loteria = $_POST["loteria"];	
-				$this->tipo = $_POST["tipo"];	
-		   } 
-		else {
+				if (isset($_POST["tipo"])){
+					$this->tipo = $_POST["tipo"];	
+				} else {
+					$this->tipo = '1';
+				}
+		   } else {
 				$fecha = date("Y-m-d"); 
 	            $this->loteria = 'LAC';	         	
 	            $this->tipo = '1';	         	

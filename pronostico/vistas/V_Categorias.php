@@ -8,7 +8,10 @@ class V_Categorias extends EstructuraHtmlSyntax
                               "Saltar2Lineas",
                               "Saltar2Lineas",
                               "FormaPorCategoria",
-                              "TablaCompany",
+                              "TablaPorSector",
+                              "TablaPorColor",
+                              "TablaPorDecena",
+                              "TablaPorFila",
                             );
 }
 

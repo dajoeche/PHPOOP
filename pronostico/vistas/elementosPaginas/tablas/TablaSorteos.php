@@ -6,8 +6,12 @@ class TablaSorteos extends TituloTabla
 
  public $etiquetaTitulo = "EtiquetaH1Html";
   public $secuencia;
+  public $fecha;
   public $loteria;
+  public $numeroAnimal;
   public $animal;
+  public $animal2;
+  public $animal3;
   public $sorteos;
   public $titulo =  "Sorteos";
   public $captionTabla =  "Sorteos";
@@ -22,17 +26,39 @@ class TablaSorteos extends TituloTabla
     public function crearObjeto() {
 		
 		if (isset($_POST["fecha"])){ 
-				$fecha = $_POST["fecha"]; 
-				$loteria = $_POST["loteria"]; 
-				$animal = $_POST["animal"]; 
+				$this->fecha = $_POST["fecha"]; 
+				$this->loteria = $_POST["loteria"]; 
+				$this->animal = $_POST["animal"]; 
+				$this->animal2 = $_POST["animal2"]; 
+				$this->animal3 = $_POST["animal3"]; 
+				$this->numeroAnimal = $_POST["numeroAnimal"]; 
 		   } 
 		else {
-				$fecha = date("Y-m-d");   
-				$loteria = 'LAC';    	
-				$animal = '00';    	
+				$this->fecha = date("Y-m-d");   
+				$this->loteria = 'LAC';    	
+				$this->animal = '00';    	
+				$this->animal2 = '0';    	
+				$this->animal3 = '1';    	
+				$this->numeroAnimal = '4';    	
 		     } 
-		$this->titulo = $this->titulo.' '.$fecha.' '.$loteria;
-		$this->sorteos = new Sorteos($fecha, $loteria,$animal);
+		$this->titulo = $this->titulo.' '.$this->fecha.' '.date("H:i:s");
+		
+		if ($this->numeroAnimal == '1'){
+			$this->sorteos = new Sorteos1($this->fecha, $this->loteria, $this->animal);
+		}
+		
+		if ($this->numeroAnimal == '2'){
+			$this->sorteos = new Sorteos2($this->fecha, $this->loteria, $this->animal, $this->animal2);
+		}
+		
+		if ($this->numeroAnimal == '3'){
+			$this->sorteos = new Sorteos3($this->fecha, $this->loteria, $this->animal, $this->animal2, $this->animal3);
+		}
+		
+		if ($this->numeroAnimal == '4'){
+			$this->sorteos = new Sorteos($this->fecha, $this->loteria);
+		}
+		
 		$this->encabezadoTabla = $this->sorteos->encabezadoTabla;
 		//echo '<pre>';
 		//print_r($this->sorteos->encabezadoTabla);

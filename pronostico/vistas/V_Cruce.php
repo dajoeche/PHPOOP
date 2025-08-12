@@ -7,7 +7,7 @@ class V_Cruce extends EstructuraHtmlSyntax
     public $contenido = array(
                               "Saltar2Lineas",
                               "Saltar2Lineas",
-                              "FormaSecuencia",
+                              "FormaCruce",
                               "TablaCruce",
                             );
 }

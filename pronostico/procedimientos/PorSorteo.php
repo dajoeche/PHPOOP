@@ -1,7 +1,7 @@
 <?php
 
 
-class PorSorteo extends PronosticarCategoria
+class PorSorteo extends PronosticarPorSector
 {
 	public $query="SELECT 
 							animal, 

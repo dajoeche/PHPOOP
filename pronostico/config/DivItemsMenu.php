@@ -17,6 +17,7 @@ class DivItemsMenu extends _Div
 									"EnlaceCruce",
 									"EnlaceSorteos",
 									"EnlaceRepetidoDiario",
+									"EnlaceDescartes",
 																	);
 	    public $atributosDiv = array("class"=>"menu");
 

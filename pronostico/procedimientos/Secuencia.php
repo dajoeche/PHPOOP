@@ -9,17 +9,16 @@ class Secuencia extends GestionarDB
 							animal, 
 							a.nombre, 
 							sector, 
-							fila, 
-							MAX(fecha),
-							DATEDIFF ('*',max(fecha )) as dias_sin_salir 
+							fila
 					FROM 
 							resultados2025 as r 
 					inner join 
 							animal as a on a.numero = r.animal 
 					WHERE 
-							`fecha` IN (SELECT DISTINCT(fecha) FROM resultados2025 where `animal`='&' and `codigoLoteria`='%' and codigoSorteo > '$') and 
+							`fecha` IN (SELECT DISTINCT(fecha) FROM resultados2025 where `animal`='&' and `codigoLoteria`='%' and codigoSorteo = '$') and 
 							codigoLoteria='%' and 
-							`fecha`< '*' 
+							`fecha`< '*' and 
+							codigoSorteo > '$'
 					GROUP BY 
 							animal 
 					ORDER BY 

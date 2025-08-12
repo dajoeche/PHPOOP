@@ -9,6 +9,7 @@ class V_Enjaulados extends EstructuraHtmlSyntax
                               "Saltar2Lineas",
                               "FormaEnjaulados",
                               "TablaEnjaulados",
+                              "TablaEnjauladosGrafico",
                             );
 }
 

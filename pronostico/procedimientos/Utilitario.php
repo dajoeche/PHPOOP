@@ -2,10 +2,10 @@
 
 trait Utilitario
 {
-	
+	public $identificadorFecha = '*';
 
     public function incluirFechaQuery($fecha) {
-        $this->query = str_replace('*',$fecha,$this->query);	 
+        $this->query = str_replace($this->identificadorFecha, $fecha, $this->query);	 
         //echo $this->query.'<br>';
     }	
 
@@ -17,10 +17,36 @@ trait Utilitario
         $this->query = str_replace('%',$loteria,$this->query);	 
     }	
 
-    public function incluirAnimalQuery($animal) {
-        $this->query = str_replace('&',$animal,$this->query);	 
+    public function incluirLimiteQuery($limite) {
+        $this->query = str_replace('@',$limite,$this->query);	 
         //echo $this->query."<br>";
     }	
+
+    public function incluirSumadeQuery($limite) {
+        $this->query = str_replace('#',$limite,$this->query);	 
+        //echo $this->query."<br>";
+    }	
+
+    public function incluirAnimalQuery($animal) {
+		if(isset($animal)){
+			$this->query = str_replace('&',$animal,$this->query);	
+		}
+         
+        //echo $this->query."<br>";
+    }	
+
+    public function incluirAnimal2Query($animal) {
+        $this->query = str_replace('!',$animal,$this->query);	 
+        //echo $this->query."<br>";
+    }	
+
+    public function cambiarIndentificadorFecha($identificador) {
+        $this->identificadorFecha=$identificador;	 
+    }
+    
+    public function restaurarIndentificadorFecha() {
+        $this->identificadorFecha='*';	 
+    }
 
     public function getLoteria($loteria) {
 		switch ($loteria) {
@@ -340,7 +366,17 @@ trait Utilitario
 					}
 	 return $nombre;
     }	
+
+    public function getAyer($fecha) { 
+		$date = new DateTime($fecha);
+		$date->modify("-1 day");
+		$ayer = $date->format("Y-m-d");
+		return $ayer;
+    }
+
+    public function obtenerDiaAnterior() {
+		$this->ayer = $this->getAyer($this->fecha);
+	}
+	
 }
-
-
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-include ("GestionarDB.php");
+//include ("../modelo/GestionarDB.php");
 class ExtraerDatos extends GestionarDB
 {
 	public $matches=array();
@@ -19,11 +19,15 @@ class ExtraerDatos extends GestionarDB
 	public $cadenaFin = '</h4>';
 	public $finDato = 'FEO';
 	public $dato;
+	public $fecha;
+	public $capturaSinParteSuperior;
+	public $capturaSinParteInferior;
 	public $numeroAnimal;
 	public $resultados=array();
 	public $valor;
 
     function __construct($html,$fecha) {
+		$this->resultados=array();
 		$this->asignarFecha($fecha);
 		$this->asignarHtml($html);
 		$this->eliminarParteSuperior();
@@ -34,8 +38,7 @@ class ExtraerDatos extends GestionarDB
 		$this->marcarFinDato();
 		$this->extraerDato();
 		$this->crearArrayResultados();
-		//$this-> mostrarVar();  
-		echo $this->name."<br>";
+		
 		$this->conectar();
 		$this->checarEstatusConexion();
 		$this->buscarNumeroRegistro();
@@ -44,6 +47,7 @@ class ExtraerDatos extends GestionarDB
 		//echo $db->numeroRegistro;
 		//echo "----------------------------------------------------------<br>";
 		$this->close();	
+		$this->agregarLoteriaTabla();
 			      
     }
   
@@ -89,6 +93,16 @@ class ExtraerDatos extends GestionarDB
             
     public function guardarResultados() {
 			array_push($this->resultados,$this->numeroAnimal[0][0]);
+    }
+            
+    public function agregarLoteriaTabla() {
+		if ($this->name=="Cazaloton" or $this->name=="Ruleta Activa"){
+			array_unshift($this->resultados, "-");		
+			array_unshift($this->resultados,$this->name);	
+			
+		} else { 
+			array_unshift($this->resultados, $this->name);
+		}
     }
             
     public function crearArrayResultados() {

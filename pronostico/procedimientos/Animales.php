@@ -1,7 +1,7 @@
 <?php
 
 
-class Animales extends PronosticarCategoria
+class Animales extends PronosticarPorSector
 {
 	public $query="SELECT numero, nombre, sumade, color, posicion, sector, fila FROM `animal`; ";	
 

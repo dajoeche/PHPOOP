@@ -21,17 +21,15 @@ class Sorteos
   public $bandera='OFF';
   public $encabezadoTabla =  array(array("Sorteo"));
  
-    function __construct($fecha, $loteria, $animal) {
+    function __construct($fecha, $loteria) {
 		$this->fecha=$fecha;
 		$this->loteria=$loteria;
-		$this->miNumero=$animal;
 		$this->crearObjeto();		      
     }  
     
     public function crearObjeto() {
-		
 		$date = new DateTime($this->fecha);
-		$date->modify("-10 day");
+		$date->modify("-9 day");
 		$this->fechaM = $date->format("Y-m-d");
 		//echo $this->fechaM;
 		$this->resultados = new Resultados($this->fechaM, $this->loteria);
@@ -39,103 +37,28 @@ class Sorteos
 		$this->extraerColumna($this->resultados->tabla);
 		$this->encabezadoTabla[0][] = $this->fechaM;
 		
-		$date = new DateTime($this->fecha);
-		$date->modify("-9 day");
-		$this->fechaM = $date->format("Y-m-d");		
-		$this->configurarFuncionRetornoExtraerColumna('iterarResultados');
-		$this->resultados = new Resultados($this->fechaM, $this->loteria);
-		$this->extraerColumna($this->resultados->tabla);
-        $this->contador = 0;
-        $this->encabezadoTabla[0][] = $this->fechaM;
-        
-		$date = new DateTime($this->fecha);
-		$date->modify("-8 day");
-		$this->fechaM = $date->format("Y-m-d");		
-		$this->configurarFuncionRetornoExtraerColumna('iterarResultados');
-		$this->resultados = new Resultados($this->fechaM, $this->loteria);
-		$this->extraerColumna($this->resultados->tabla);
-        $this->contador = 0;
-        $this->encabezadoTabla[0][] = $this->fechaM;
-        
-		$date = new DateTime($this->fecha);
-		$date->modify("-7 day");
-		$this->fechaM = $date->format("Y-m-d");		
-		$this->configurarFuncionRetornoExtraerColumna('iterarResultados');
-		$this->resultados = new Resultados($this->fechaM, $this->loteria);
-		$this->extraerColumna($this->resultados->tabla);	
-        $this->contador = 0;
-        $this->encabezadoTabla[0][] = $this->fechaM;
-        
-		$date = new DateTime($this->fecha);
-		$date->modify("-6 day");
-		$this->fechaM = $date->format("Y-m-d");		
-		$this->configurarFuncionRetornoExtraerColumna('iterarResultados');
-		$this->resultados = new Resultados($this->fechaM, $this->loteria);
-		$this->extraerColumna($this->resultados->tabla);		    
-        $this->contador = 0;
-        $this->encabezadoTabla[0][] = $this->fechaM;
-        
-		$date = new DateTime($this->fecha);
-		$date->modify("-5 day");
-		$this->fechaM = $date->format("Y-m-d");		
-		$this->configurarFuncionRetornoExtraerColumna('iterarResultados');
-		$this->resultados = new Resultados($this->fechaM, $this->loteria);
-		$this->extraerColumna($this->resultados->tabla);	
-        $this->contador = 0;
-        $this->encabezadoTabla[0][] = $this->fechaM;
-        
-		$date = new DateTime($this->fecha);
-		$date->modify("-4 day");
-		$this->fechaM = $date->format("Y-m-d");		
-		$this->configurarFuncionRetornoExtraerColumna('iterarResultados');
-		$this->resultados = new Resultados($this->fechaM, $this->loteria);
-		$this->extraerColumna($this->resultados->tabla);				
-        $this->contador = 0;
-        $this->encabezadoTabla[0][] = $this->fechaM;
-        
-		$date = new DateTime($this->fecha);
-		$date->modify("-3 day");
-		$this->fechaM = $date->format("Y-m-d");		
-		$this->configurarFuncionRetornoExtraerColumna('iterarResultados');
-		$this->resultados = new Resultados($this->fechaM, $this->loteria);
-		$this->extraerColumna($this->resultados->tabla); 			
-        $this->contador = 0;
-        $this->encabezadoTabla[0][] = $this->fechaM;
-        
-		$date = new DateTime($this->fecha);
-		$date->modify("-2 day");
-		$this->fechaM = $date->format("Y-m-d");		
-		$this->configurarFuncionRetornoExtraerColumna('iterarResultados');
-		$this->resultados = new Resultados($this->fechaM, $this->loteria);
-		$this->extraerColumna($this->resultados->tabla);
-        $this->contador = 0;
-        $this->encabezadoTabla[0][] = $this->fechaM;
-        
-		$date = new DateTime($this->fecha);
-		$date->modify("-1 day");
-		$this->fechaM = $date->format("Y-m-d");		
-		$this->configurarFuncionRetornoExtraerColumna('iterarResultados');
-		$this->resultados = new Resultados($this->fechaM, $this->loteria);
-		$this->extraerColumna($this->resultados->tabla);
-		$this->encabezadoTabla[0][] = $this->fechaM;
+		for($i=8; $i>0; $i--){
+			$date = new DateTime($this->fecha);
+			$date->modify("-".$i." day");
+			$this->fechaM = $date->format("Y-m-d");		
+			$this->configurarFuncionRetornoExtraerColumna('iterarResultados');
+			$this->resultados = new Resultados($this->fechaM, $this->loteria);
+			$this->extraerColumna($this->resultados->tabla);
+			$this->contador = 0;
+			$this->encabezadoTabla[0][] = $this->fechaM;
+		}
+
+		
     }
     
 	public function agregarSorteos($resultado) {
-		if ($resultado[1] === $this->miNumero){
-			$this->tabla[]= array($resultado[0],$resultado[1]);		
-		} else {
-			$this->tabla[]= array($resultado[0],'');	
-		}
-			
+
+		$this->tabla[]= array($resultado[0],$resultado[1]);				
 	}    
     
 	public function iterarResultados($resultado) {
-		if ($resultado[1] === $this->miNumero){
-			$this->tabla[$this->contador][]= $resultado[1];	
-		} else {
-			$this->tabla[$this->contador][]= '';	
-		}
-			
+
+		$this->tabla[$this->contador][]= $resultado[1];		
 		$this->contador = $this->contador+1;
 	}    
 		

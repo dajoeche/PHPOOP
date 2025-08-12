@@ -5,9 +5,14 @@ class TablaCalendarioEnero extends TituloTabla
   use Utilitario;
   public $etiquetaTitulo = "EtiquetaH1Html";
   public $calendario;
+  public $calendario2;
+  public $numeroAnimal;
   public $animal;
+  public $animal2;
   public $loteria;
   public $mesAnimal;
+  public $mesAnimal2;
+  public $nombreMes='Enero';
   //public $enero=array(array(1,2,3,array("dato"=>"4","atributos"=>array("class"=>"amarillo"))));
   public $enero=array(
 						array("",'','','2025-01-01','2025-01-02','2025-01-03','2025-01-04'),
@@ -26,23 +31,47 @@ class TablaCalendarioEnero extends TituloTabla
 		$this->crearObjeto();		      
     }  
     
-    public function crearObjeto() {
+    public function crearObjeto() { 
 		
+		//echo "<pre>";
+		//print_r($_POST);
+
 		if (isset($_POST["animal"])){ 
-				$this->animal = $_POST["animal"];	
-				$this->loteria = $_POST["loteria"];	
-		   } 
+					$this->animal = $_POST["animal"];	
+					$this->animal2 = $_POST["animal2"];	
+					$this->loteria = $_POST["loteria"];	
+					$this->loteria = $_POST["loteria"];	
+					$this->numeroAnimal = $_POST["numeroAnimal"];	
+		} 
 		else {
-	            $this->animal = '00';	         	
-	            $this->loteria = 'LAC';	         	
-		     } 
-		//$this->titulo = $this->titulo.' '.$this->loteria;
-		$this->titulo = "Enero".' - '.$this->getLoteria($this->loteria).' - '.$this->getAnimal($this->animal);
-		$this->calendario = new Calendario($this->animal, $this->loteria);
-		$this->mesAnimal = new MesAnimal($this->enero, $this->calendario->tabla);
-		
-		//print_r($this->calendario->tabla);
-		$this->itemsTabla=$this->mesAnimal->tabla;  
+				$this->animal = '00';	         	
+				$this->animal2 = '0';	         	
+				$this->loteria = 'LAC';	         	
+				$this->numeroAnimal = '1';	         	
+			 } 
+				 		
+		if ($this->numeroAnimal=='2'){
+			
+			$this->titulo = $this->nombreMes.' - '.$this->getLoteria($this->loteria).' - '.$this->getAnimal($this->animal).' / '.$this->getAnimal($this->animal2);
+			$this->calendario2 = new Calendario2($this->animal, $this->animal2, $this->loteria);
+			$this->mesAnimal2 = new MesAnimal2($this->enero, $this->calendario2->tabla, $this->animal, $this->animal2);	
+			$this->itemsTabla=$this->mesAnimal2->tabla;  	
+			//echo "<pre>";
+			//echo print_r($this->mesAnimal2->tabla);		
+
+		} elseif ($this->numeroAnimal=='1') {
+
+			$this->titulo = $this->nombreMes.' - '.$this->getLoteria($this->loteria).' - '.$this->getAnimal($this->animal);
+			$this->calendario = new Calendario($this->animal, $this->loteria);
+			$this->mesAnimal = new MesAnimal($this->enero, $this->calendario->tabla);	
+			$this->itemsTabla=$this->mesAnimal->tabla;  
+		} elseif ($this->numeroAnimal=='5') {
+
+			$this->titulo = $this->nombreMes.' - '.$this->getLoteria($this->loteria).' - Salida Por Fechas';
+			$this->calendario = new CalendarioFecha($this->loteria);
+			$this->mesAnimal = new MesAnimal($this->enero, $this->calendario->tabla);	
+			$this->itemsTabla=$this->mesAnimal->tabla;  
+		}
 		
 	}
 

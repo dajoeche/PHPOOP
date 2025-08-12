@@ -16,6 +16,8 @@ trait MArmarPagina
   	public $style = "_Style";
   	public $body = "EtiquetaCuerpoHtml";
   	public $menu = "DivMenu";
+  	public $menu2 = "DivMenu2";
+  	public $contenedor = "DivMain";
   	public $espaciador = "DivSpacing";
   	public $pieDePagina = "DivPieDePagina";
   	public $codigoRetorno = "";
@@ -25,7 +27,7 @@ trait MArmarPagina
     public function generarArmarPagina()
     {
       $this->etiquetaObjeto = new MObjetos();
-			$this->etiquetaObjeto->crear($this->html5);
+			$this->etiquetaObjeto->crear($this->html5); 
 			$this->etiquetaObjeto->crear($this->html);
 			$this->etiquetaObjeto->incrustar($this->encabezado);
 			$this->etiquetaObjeto->cambiarEstadoConcatenador();
@@ -40,7 +42,10 @@ trait MArmarPagina
 			$this->etiquetaObjeto->incrustar($this->body);
 			$this->etiquetaObjeto->cambiarEstadoConcatenador();
 			$this->etiquetaObjeto->incrustar($this->menu);
+			$this->etiquetaObjeto->incrustar($this->menu2);
 			$this->etiquetaObjeto->incrustar($this->espaciador);
+			$this->etiquetaObjeto->cambiarEstadoConcatenador();
+			$this->etiquetaObjeto->incrustar($this->contenedor);			
 			$this->etiquetaObjeto->incrustar($this->contenido);
 			$this->etiquetaObjeto->cambiarEstadoConcatenador();
 			$this->etiquetaObjeto->incrustar($this->pieDePagina);

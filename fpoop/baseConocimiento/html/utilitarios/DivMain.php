@@ -1,6 +1,6 @@
 <?php
 
-class DivMain extends EtiquetaDivHtml
+class DivMain extends EtiquetaDivEspecialHtml
 {
 
     public $atributosDefecto = array(

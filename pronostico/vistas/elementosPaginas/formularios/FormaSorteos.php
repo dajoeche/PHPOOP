@@ -3,11 +3,14 @@
 class FormaSorteos extends TablaFormulario
 {
   public $modoBoton = "OFF";
-  public $atributosFormulario = array("action"=>"http://localhost//phpoop/pronostico/index.php?ir=V_Sorteos", "method"=>"post");
+  public $atributosFormulario = array("action"=>PATHMENU."V_Sorteos", "method"=>"post");
   public $itemsTabla =  array(
                                 array("CajaTextoFechaFor"),
                                 array("SelectLoteria"),
                                 array("SelectAnimal"),
+                                array("SelectAnimal2"),
+                                array("SelectAnimal3"),
+                                array("SelectNumeroAnimal"),
                                 array("Espacio","SubmitForma"),
                                 
                              );

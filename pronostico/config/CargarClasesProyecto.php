@@ -18,6 +18,7 @@ class CargarClasesProyecto extends IAutoCargarClases
 								PATHDIRECTORIO."/vistas/",
 								PATHDIRECTORIO."/paginas/",
 								PATHDIRECTORIO."/procedimientos/",
+								PATHDIRECTORIO."/modelo/",
 								PATHDIRECTORIO."/config/",
 							   );
 }

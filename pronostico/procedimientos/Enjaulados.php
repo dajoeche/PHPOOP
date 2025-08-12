@@ -1,7 +1,7 @@
 <?php
 
 
-class Enjaulados extends PronosticarCategoria
+class Enjaulados extends PronosticarPorSector
 {
 	public $query="
 					SELECT 

@@ -13,7 +13,9 @@ class V_Calendario extends EstructuraHtmlSyntax
                               "TablaCalendarioMarzo",
                               "TablaCalendarioAbril",
                               "TablaCalendarioMayo",
-                               "TablaCalendarioJunio",
+                              "TablaCalendarioJunio",
+                              "TablaCalendarioJulio",
+                              "TablaCalendarioAgosto",
                             );
 }
 

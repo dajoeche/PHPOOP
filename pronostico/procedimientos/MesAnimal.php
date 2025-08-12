@@ -51,6 +51,8 @@ class MesAnimal
 			
 		} elseif($this->bandera=='RE') {
 			$this->fila[] = array("dato"=>substr($this->dia,-2),"atributos"=>array("class"=>"gris"));
+		} elseif($this->bandera=='TR') {
+			$this->fila[] = array("dato"=>substr($this->dia,-2),"atributos"=>array("class"=>"mora"));
 		} else {
 			$this->fila[] = substr($this->dia,-2);
 		}	
@@ -64,14 +66,14 @@ class MesAnimal
     public function iterarResultado($resultado) {
 		//echo '<pre>';
 		//print_r($semana);
-		if ($this->dia==$resultado[1]){
-			//echo $resultado[1].'<br>';
-			if($this->bandera=='ON'){
-				$this->bandera='RE';
-			} elseif ($this->bandera='OFF') {
-				$this->bandera='ON';
-			}	
-		}
+		if ($this->dia==$resultado[1] and $this->bandera<>'ON' and $this->bandera<>'RE' and $this->bandera<>'TR'){
+			$this->bandera='ON';
+		} elseif ($this->dia==$resultado[1] and $this->bandera=='ON'){
+			$this->bandera='RE';
+		} elseif ($this->dia==$resultado[1] and $this->bandera=='RE'){
+			$this->bandera='TR';
+		} 
+	   
 	
 	}   
 		

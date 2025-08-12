@@ -1,9 +1,10 @@
 .navigation {
   background-color: #333;
-  padding: 10px;
+  padding: 5px;
   display: flex; /* For horizontal layout */
   justify-content: space-between; /* Distribute space between logo and menu items */
   align-items: center;
+  font-size: 0.9em;
 }
 
 .logo {
@@ -22,7 +23,7 @@
 .menu a {
   color: white;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 5px 10px;
   display: block;
 }
 
@@ -30,25 +31,91 @@
   background-color: #555;
 }
 
-#miTabla {
+#miTabla, #tablon {
   width: 40%; /* La tabla ocupa todo el ancho del contenedor */
   border-collapse: collapse; /* Elimina el espacio entre los bordes de las celdas */
 }
 
-#miTabla th, #miTabla td {
+#miTabla th, #miTabla td, #tablon th, #tablon td {
   border: 1px solid black; /* Agrega un borde a las celdas */
   padding: 8px; /* Agrega relleno dentro de las celdas */
   text-align: right; /* Alinea el texto a la izquierda */
 }
 
-#miTabla th {
+#miTabla th, #tablon th {
   background-color: #FFDEAD; /* Color de fondo para los encabezados */
   text-align: center; /* Alinea el texto a la izquierda */
 }
 
-table tr:nth-child(even) { background:#5F9EA0; }
+table tr:nth-child(even) { background:lightgrey; }
 table tr:nth-child(odd) { background:white; }
 
-.amarillo {background-color: yellow;}
+.amarillo {background-color: yellow;} 
+.aqua {background-color: aqua;}
+.red {background-color: LightCoral;}
+.verde {background-color: green;}
+.mora {background-color:  #8e44ad ;}
+.marron {background-color:  #6b1b0a ;}
 
 .gris {background-color: grey;}
+.salmonClaro {background-color: LightSalmon;}
+.blanco {background-color: white;}
+.rojo {background-color: #ff0000;}  
+.negro {background-color: #000000;}
+.verde {background-color: green;}
+.cian {background-color: cian;}
+.naranja {background-color: orange;}
+	  
+.negro, .rojo, .verde, .mora, .gris {
+       color: white;
+       font-weight: bold;
+}
+
+.sidebar {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+.sidebarr {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+.sidebar a, .sidebarr a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #818181;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebarr a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}

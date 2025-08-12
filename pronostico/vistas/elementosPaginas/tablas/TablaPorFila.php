@@ -1,15 +1,15 @@
 <?php
 
-class TablaCompany extends TituloTabla
+class TablaPorFila extends TituloTabla
 {
   use Utilitario;
   public $etiquetaTitulo = "EtiquetaH1Html";
-  public $pronosticarCategoria;
+  public $pronosticarPorFila;
   public $loteria;
-  public $titulo =  "Pronostico Por Categoria";
+  public $titulo =  "Pronostico Por Fila";
   public $captionTabla =  "Pronostico Por Categoria";
   public $atributosTabla =  array("id"=>"miTabla");
-  public $encabezadoTabla =  array(array("Repetidos", "Categoria"));
+  public $encabezadoTabla =  array(array("Repetidos", "Fila"));
   public $itemsTabla =  array(array("Alfreds Futterkiste", "Maria Anders", "Germany"),
                               array("Centro Comercial Moctezuma","Francisco Chang", "Mexico"),
 							  array("Ernst Handel","Roland Mendel", "Austria"),
@@ -30,14 +30,12 @@ class TablaCompany extends TituloTabla
 				$fecha = date("Y-m-d"); 
 	            $this->loteria = 'LAC';	         	
 		     }     
+		$fecha = $this->getAyer($fecha);
 		$this->titulo = $this->titulo.' '.$fecha.' - '.$this->getLoteria($this->loteria);
-		$date = new DateTime($fecha);
-		$date->modify("-1 day");
-		$fecha = $date->format("Y-m-d");
 		//$fecha = date("Y-m-d"); 
 		//echo $fecha;
-		$this->pronosticarCategoria = new PronosticarCategoria($fecha,$this->loteria);
-		$this->itemsTabla=$this->pronosticarCategoria->tabla;
+		$this->pronosticarPorFila = new PronosticarPorFila($fecha,$this->loteria);
+		$this->itemsTabla=$this->pronosticarPorFila->tabla;
     }    
 
 }

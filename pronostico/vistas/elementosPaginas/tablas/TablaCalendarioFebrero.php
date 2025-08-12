@@ -1,6 +1,6 @@
 <?php
 
-class TablaCalendarioFebrero extends TituloTabla
+class TablaCalendarioFebrero extends TablaCalendarioEnero
 {
   use Utilitario;
   public $etiquetaTitulo = "EtiquetaH1Html";
@@ -8,6 +8,7 @@ class TablaCalendarioFebrero extends TituloTabla
   public $animal;
   public $loteria;
   public $mesAnimal;
+  public $nombreMes='Febrero';
   //public $enero=array(array(1,2,3,array("dato"=>"4","atributos"=>array("class"=>"amarillo"))));
   public $enero=array(
 						array("",'','','','','','2025-02-01'),
@@ -22,29 +23,6 @@ class TablaCalendarioFebrero extends TituloTabla
   public $encabezadoTabla =  array(array("Do", "Lu","Ma","Mi","Ju","Vi","Sa"));
   public $itemsTabla;
  
-    function __construct() {
-		$this->crearObjeto();		      
-    }  
-    
-    public function crearObjeto() {
-		
-		if (isset($_POST["animal"])){ 
-				$this->animal = $_POST["animal"];	
-				$this->loteria = $_POST["loteria"];	
-		   } 
-		else {
-	            $this->animal = '00';	         	
-	            $this->loteria = 'LAC';	         	
-		     } 
-		//$this->titulo = $this->titulo.' '.$this->loteria;
-		$this->titulo = "Febrero".' - '.$this->getLoteria($this->loteria).' - '.$this->getAnimal($this->animal);
-		$this->calendario = new Calendario($this->animal, $this->loteria);
-		$this->mesAnimal = new MesAnimal($this->enero, $this->calendario->tabla);
-		
-		//print_r($this->calendario->tabla);
-		$this->itemsTabla=$this->mesAnimal->tabla;  
-		
-	}
 
 }
 

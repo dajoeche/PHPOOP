@@ -26,8 +26,7 @@ class TablaPorSorteo extends TituloTabla
 				$this->loteria = $_POST["loteria"];	
 				$this->sorteo = $_POST["sorteo"];	
 				$this->tipo = $_POST["tipo"];	
-		   } 
-		else {
+		   } else {
 	            $this->loteria = 'LAC';	         	
 	            $this->sorteo = '1';	         	
 	            $this->tipo = '1';	         	
@@ -38,8 +37,8 @@ class TablaPorSorteo extends TituloTabla
 		if($this->tipo == '1'){
 			$this->diasSinSalir = new DiasSinSalir($this->descripcion->tabla,$this->sorteo);	
 		} else {
-			$this->diasSinSalir = new DiasSinSalirDiario($this->descripcion->tabla);
-			$this->encabezadoTabla =  array(array( "Numero","Nombre Animal","Suma De","Color","Posicion","Sector","Fila","Fecha","Descripcion","Dias Sin Salir","Sorteo"));
+			$this->diasSinSalir = new DiasSinSalirDiario($this->descripcion->tabla, $this->loteria);
+			$this->encabezadoTabla =  array(array( "","Numero","Nombre Animal","Suma De","Color","Posicion","Sector","Fila","Fecha","Descripcion","Dias Sin Salir","Sorteo"));
 		}
 		
 		$this->itemsTabla=$this->diasSinSalir->tabla;

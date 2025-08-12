@@ -1,7 +1,7 @@
 <?php
 
 
-class RepetidoDiario extends PronosticarCategoria
+class RepetidoDiario extends PronosticarPorSector
 {
 	public $query="
 					SELECT 

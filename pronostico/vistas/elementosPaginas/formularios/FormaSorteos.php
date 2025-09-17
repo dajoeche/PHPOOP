@@ -10,6 +10,7 @@ class FormaSorteos extends TablaFormulario
                                 array("SelectAnimal"),
                                 array("SelectAnimal2"),
                                 array("SelectAnimal3"),
+                                array("SelectAnimal4"),
                                 array("SelectNumeroAnimal"),
                                 array("Espacio","SubmitForma"),
                                 

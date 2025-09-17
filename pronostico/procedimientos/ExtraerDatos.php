@@ -1,7 +1,7 @@
 <?php
 
 //include ("../modelo/GestionarDB.php");
-class ExtraerDatos extends GestionarDB
+class ExtraerDatos extends GestionarDBPronostico
 {
 	public $matches=array();
 	public $codigoSorteo=0;

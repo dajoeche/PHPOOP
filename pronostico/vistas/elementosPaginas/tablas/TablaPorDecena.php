@@ -1,11 +1,12 @@
 <?php
 
-class TablaPorDecena extends TituloTabla
+class TablaPorDecena extends TablaPorColor
 {
   use Utilitario;
   public $etiquetaTitulo = "EtiquetaH1Html";
   public $pronosticarPorDecena;
   public $loteria;
+  public $nombreObjeto= 'P_PronosticarPorDecena';
   public $titulo =  "Pronostico Por Decena";
   public $captionTabla =  "Pronostico Por Categoria";
   public $atributosTabla =  array("id"=>"miTabla");
@@ -17,26 +18,7 @@ class TablaPorDecena extends TituloTabla
 							  array("Laughing Bacchus Winecellars","Yoshi Tannamuri", "Canada"),
 							  array("Magazzini Alimentari Riuniti","Giovanni Rovelli", "Italy"),
                                 );
-    function __construct() {
-		$this->crearObjeto();		      
-    }  
-    
-    public function crearObjeto() {
-		if (isset($_POST["fecha"])){ 
-				$fecha = $_POST["fecha"]; 
-				$this->loteria = $_POST["loteria"];	
-		   } 
-		else {
-				$fecha = date("Y-m-d"); 
-	            $this->loteria = 'LAC';	         	
-		     }     
-		$fecha = $this->getAyer($fecha);
-		$this->titulo = $this->titulo.' '.$fecha.' - '.$this->getLoteria($this->loteria);
-		//$fecha = date("Y-m-d"); 
-		//echo $fecha;
-		$this->pronosticarPorDecena = new PronosticarPorDecena($fecha,$this->loteria);
-		$this->itemsTabla=$this->pronosticarPorDecena->tabla;
-    }    
+       
 
 }
 

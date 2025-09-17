@@ -10,7 +10,7 @@ class TablaCalendarioMayo extends TablaCalendarioEnero
   public $mesAnimal;
   public $nombreMes='Mayo';
   //public $enero=array(array(1,2,3,array("dato"=>"4","atributos"=>array("class"=>"amarillo"))));
-  public $enero=array(
+  public $diaMes=array(
 						array('','','','','2025-05-01','2025-05-02','2025-05-03'),
 						array('2025-05-04','2025-05-05','2025-05-06','2025-05-07','2025-05-08','2025-05-09','2025-05-10'),
 						array('2025-05-11','2025-05-12','2025-05-13','2025-05-14','2025-05-15','2025-05-16','2025-05-17'),

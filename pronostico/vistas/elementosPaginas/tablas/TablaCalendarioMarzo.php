@@ -10,7 +10,7 @@ class TablaCalendarioMarzo extends TablaCalendarioEnero
   public $mesAnimal;
   public $nombreMes='Marzo';
   //public $enero=array(array(1,2,3,array("dato"=>"4","atributos"=>array("class"=>"amarillo"))));
-  public $enero=array(
+  public $diaMes=array(
 						array('','','','','','','2025-03-01'),
 						array('2025-03-02','2025-03-03','2025-0-04','2025-03-05','2025-03-06','2025-03-07','2025-03-08'),
 						array('2025-03-09','2025-03-10','2025-03-11','2025-03-12','2025-03-13','2025-03-14','2025-03-15'),

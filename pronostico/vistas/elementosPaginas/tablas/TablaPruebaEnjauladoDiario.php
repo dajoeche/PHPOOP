@@ -1,8 +1,8 @@
 <?php
 
-class TablaPruebaEnjauladoDiario extends TablaFechaLoteria
+class TablaPruebaEnjauladoDiario extends TablaBaseFechaLoteria
 {
-  public $nombreObjeto='PruebaEnjauladoDiario';
+  public $nombreObjeto='P_PruebaEnjauladoDiario';
   public $titulo =  "Prueba Enjaulado Diario";
   public $captionTabla =  "Prueba Enjaulado Diario";
   public $atributosTabla =  array("id"=>"miTabla");

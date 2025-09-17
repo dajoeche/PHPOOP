@@ -52,9 +52,12 @@ table tr:nth-child(odd) { background:white; }
 
 .amarillo {background-color: yellow;} 
 .aqua {background-color: aqua;}
-.red {background-color: LightCoral;}
+.red {background-color: #F87C63;}
+.rojito {background-color: #FCC6BB;}
 .verde {background-color: green;}
-.mora {background-color:  #8e44ad ;}
+.morado {background-color:  #500EC4 ;}
+.mora {background-color:  #7E3BF1  ;}
+.moradito {background-color:  #B791F7  ;}
 .marron {background-color:  #6b1b0a ;}
 
 .gris {background-color: grey;}
@@ -65,8 +68,9 @@ table tr:nth-child(odd) { background:white; }
 .verde {background-color: green;}
 .cian {background-color: cian;}
 .naranja {background-color: orange;}
+.azul {background-color: blue;}
 	  
-.negro, .rojo, .verde, .mora, .gris {
+.negro, .rojo, .verde, .mora, .gris, .azul, .morado {
        color: white;
        font-weight: bold;
 }

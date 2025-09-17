@@ -2,6 +2,8 @@
 
 trait Utilitario
 {
+	public $date;	
+	
 	public $identificadorFecha = '*';
 
     public function incluirFechaQuery($fecha) {
@@ -239,6 +241,9 @@ trait Utilitario
 						case "36":
 							$nombre = "Culebra";
 						break;						
+						case "-":
+							$nombre = "-";
+						break;						
 					}
 	 return $nombre;
     }	
@@ -377,6 +382,19 @@ trait Utilitario
     public function obtenerDiaAnterior() {
 		$this->ayer = $this->getAyer($this->fecha);
 	}
-	
+
+    public function obtenerHoy() {
+		$this->date = new DateTime();
+		return $this->date->format("Y-m-d");	
+	}
+
+    public function getTipo($tipo) {
+		if ($tipo === "1"){
+			$tipo="Por Sorteo";
+		} else {
+			$tipo="Diario";
+		}
+		return $tipo;
+	}	
 }
 ?>

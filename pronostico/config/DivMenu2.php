@@ -7,6 +7,8 @@ class DivMenu2 extends _Div
 									"EnlacePruebaSecuenciaSorteo",			
 									"EnlacePruebaEnjauladoDiario",			
 									"EnlaceDescartes12",			
+									"EnlaceCombinados",			
+									"EnlacePronostico",			
 
 																	);
 	    public $atributosDiv = array("class"=>"sidebarr");

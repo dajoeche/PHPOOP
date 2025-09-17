@@ -20,6 +20,8 @@ class CargarClasesFpoop extends IAutoCargarClases
 								"../fpoop/proyecto/",
 								"../fpoop/config/",
 								"../fpoop/model/",
+								"../fpoop/view/",
+								"../fpoop/procedure/",
 							   );
 
     public function __construct()

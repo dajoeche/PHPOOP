@@ -1,20 +1,15 @@
 <?php
 
 
-class M_BaseFechaLoteriaSorteoAnimal extends GestionarDB
+class M_BaseFechaLoteriaSorteoAnimal extends M_Base
 {
 	public $query="";	
 
-    function __construct($fecha, $loteria, $sorteo, $animal) {
-		$this->conectar();
-		$this->checarEstatusConexion();
-		$this->incluirFechaQuery($fecha);
-		$this->incluirLoteriaQuery($loteria);			
-		$this->incluirSorteoQuery($sorteo);
-		$this->incluirAnimalQuery($animal);
-		$this->ejecutarQuery();
-		$this->imprimirQuery();
-		$this->close();
+    function incluirVariablesQuery() {
+		$this->incluirFechaQuery($this->fecha);
+		$this->incluirLoteriaQuery($this->loteria);			
+		$this->incluirSorteoQuery($this->sorteo);
+		$this->incluirAnimalQuery($this->animal);
     }		
 }
 

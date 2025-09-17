@@ -7,7 +7,7 @@ class V_PorFechas extends EstructuraHtmlSyntax
     public $contenido = array(
                               "Saltar2Lineas",
                               "Saltar2Lineas",
-                             "FormaPorFecha",
+							  "FormaPorFecha",
                               "TablaPorFechas",
                             );
 }

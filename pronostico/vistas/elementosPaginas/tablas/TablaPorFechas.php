@@ -1,12 +1,13 @@
 <?php
 
-class TablaPorFechas extends TituloTabla
+class TablaPorFechas extends TablaBaseFechaLoteriaTipo
 {
   use Utilitario;
-  public $etiquetaTitulo = "EtiquetaH1Html";
+  public $etiquetaTitulo = "EtiquetaH2Html";
   public $resultado;
   public $loteria;
   public $tipo;
+  public $nombreObjeto='P_PorFechas';
   public $porFechas;
   public $titulo =  "Pronostico Por Fechas De Ultima Salida";
   public $captionTabla =  "porFechas ";
@@ -18,44 +19,14 @@ class TablaPorFechas extends TituloTabla
 							  array("Island Trading","Helen Bennett", "UK"),
 							  array("Laughing Bacchus Winecellars","Yoshi Tannamuri", "Canada"),
 							  array("Magazzini Alimentari Riuniti","Giovanni Rovelli", "Italy"),
-                                );
-    function __construct() { 
-		$this->crearObjeto();		      
-    }  
-    
-    public function crearObjeto() {
-		if (isset($_POST["fecha"])){ 
-				$fecha = $_POST["fecha"]; 
-				$this->loteria = $_POST["loteria"];	
-				if (isset($_POST["tipo"])){
-					$this->tipo = $_POST["tipo"];	
-				} else {
-					$this->tipo = '1';
-				}
-		   } else {
-				$fecha = date("Y-m-d"); 
-	            $this->loteria = 'LAC';	         	
-	            $this->tipo = '1';	         	
-		     } 
+                                ); 
 		
-		$date = new DateTime($fecha);
-		$date->modify("-1 day");
-		//$fecha = $date->format("Y-m-d");
-		$this->titulo = $this->titulo.' '.$fecha.' - '.$this->getLoteria($this->loteria);
-		$this->resultado = new Resultado($fecha,$this->loteria);
-		//$fecha = date("Y-m-d"); 
-		//$date = new DateTime($fecha);
-		//$date->modify("-1 day");
-		//$fecha = $date->format("Y-m-d");
-		if($this->tipo == '1'){
-			$this->porFechas =  new PorFechas($fecha, $this->resultado->tabla);
-		} else {
-			$this->porFechas =  new PorFechasDiario($fecha, $this->resultado->tabla);
-		}
-		
-		$this->itemsTabla=$this->porFechas->tabla;
-		
-    }    
+  
+    public function setTituloTabla() {
+		//$this->obtenerDiaAnterior(); 
+		$this->titulo = $this->titulo.' '.$this->fecha.' - '.$this->getLoteria($this->loteria).' - '.$this->getTipo($this->tipo);
+	} 
+		 
 
 }
 

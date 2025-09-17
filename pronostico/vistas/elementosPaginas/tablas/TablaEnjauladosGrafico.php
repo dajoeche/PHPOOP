@@ -37,7 +37,7 @@ class TablaEnjauladosGrafico extends TituloTabla
 		$this->titulo = $this->titulo.' '.$fecha.' '.$this->getLoteria($loteria);
 		
 
-		$this->resultados = new EnjauladosGrafico($fecha, $loteria, $sorteo);
+		$this->resultados = new P_EnjauladosGrafico($fecha, $loteria, $sorteo);
 		//$this->encabezadoTabla = $this->encabezadoTabla;
 		//echo '<pre>';
 		//print_r($this->sorteos->encabezadoTabla);

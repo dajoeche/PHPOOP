@@ -11,6 +11,7 @@ class DivMenu extends _Div
 									"EnlaceEnjaulados",
 									"EnlaceEspejo",	
 									"EnlaceCategorias",								
+									"EnlaceMasSalen",								
 									"EnlacePorFechas",
 									"EnlacePorSorteo",
 									"EnlaceRacha",

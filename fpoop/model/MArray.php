@@ -3,9 +3,35 @@
 trait MArray
 {
 
+    public $funcionRetornoExtraerArray1 = "Default";
+    public $funcionRetornoExtraerArray2 = "Default";
     public $funcionRetornoExtraerFila = "Default";
     public $funcionRetornoExtraerColumna = "Default";
     public $funcionRetornoIterarArray = "Default";
+
+    public function extraerArray1($array1)
+    {
+      foreach($array1 as $row){
+        call_user_func(array($this, $this->funcionRetornoExtraerArray1),$row);
+      }
+    }
+
+    public function configurarFuncionRetornoExtraerArray1($funcionRetornoExtraerArray1)
+    {
+      $this->funcionRetornoExtraerArray1 = $funcionRetornoExtraerArray1;
+    }
+
+    public function extraerArray2($array2)
+    {
+      foreach($array2 as $row){
+        call_user_func(array($this, $this->funcionRetornoExtraerArray2),$row);
+      }
+    }
+
+    public function configurarFuncionRetornoExtraerArray2($funcionRetornoExtraerArray2)
+    {
+      $this->funcionRetornoExtraerArray2 = $funcionRetornoExtraerArray2;
+    }
 
     public function extraerColumna($fila)
     {
